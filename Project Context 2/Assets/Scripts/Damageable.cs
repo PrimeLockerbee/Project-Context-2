@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-#if INVECTOR_BASIC || INVECTOR_AI_TEMPLATE
-using Invector;
-#endif
 
-namespace BNG {
+
     /// <summary>
     /// A basic damage implementation. Call a function on death. Allow for respawning.
     /// </summary>
     public class Damageable : MonoBehaviour {
+
+        [System.Serializable]
+        public class FloatEvent : UnityEvent<float> { }
 
         public float Health = 100;
         private float _startingHealth;
@@ -60,8 +60,8 @@ namespace BNG {
         [Tooltip("Remove any decals that were parented to this object on death. Useful for clearing unused decals.")]
         public bool RemoveBulletHolesOnDeath = true;
 
-        [Header("Events")]
-        [Tooltip("Optional Event to be called when receiving damage. Takes damage amount as a float parameter.")]
+        //[Header("Events")]
+        //[Tooltip("Optional Event to be called when receiving damage. Takes damage amount as a float parameter.")]
         public FloatEvent onDamaged;
 
         [Tooltip("Optional Event to be called once health is <= 0")]
@@ -165,24 +165,6 @@ namespace BNG {
                 StartCoroutine(RespawnRoutine(RespawnTime));
             }
 
-            // Drop this if the player is holding it
-            Grabbable grab = GetComponent<Grabbable>();
-            if (DropOnDeath && grab != null && grab.BeingHeld) {
-                grab.DropItem(false, true);
-            }
-
-            // Remove an decals that may have been parented to this object
-            if (RemoveBulletHolesOnDeath) {
-                BulletHole[] holes = GetComponentsInChildren<BulletHole>();
-                foreach (var hole in holes) {
-                    GameObject.Destroy(hole.gameObject);
-                }
-
-                Transform decal = transform.Find("Decal");
-                if (decal) {
-                    GameObject.Destroy(decal.gameObject);
-                }
-            }
         }
 
         IEnumerator RespawnRoutine(float seconds) {
@@ -216,4 +198,3 @@ namespace BNG {
             }
         }
     }
-}

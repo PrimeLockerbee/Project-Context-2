@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageCollide : MonoBehaviour
+public class DamageCollider : MonoBehaviour
 {
     /// <summary>
     /// How much damage to apply to the Damageable object
