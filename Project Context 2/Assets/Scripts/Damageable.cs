@@ -12,6 +12,9 @@ namespace BNG {
     /// </summary>
     public class Damageable : MonoBehaviour {
 
+        [System.Serializable]
+        public class FloatEvent : UnityEvent<float> { }
+
         public float Health = 100;
         private float _startingHealth;
 
@@ -163,25 +166,6 @@ namespace BNG {
             }
             else if (Respawn) {
                 StartCoroutine(RespawnRoutine(RespawnTime));
-            }
-
-            // Drop this if the player is holding it
-            Grabbable grab = GetComponent<Grabbable>();
-            if (DropOnDeath && grab != null && grab.BeingHeld) {
-                grab.DropItem(false, true);
-            }
-
-            // Remove an decals that may have been parented to this object
-            if (RemoveBulletHolesOnDeath) {
-                BulletHole[] holes = GetComponentsInChildren<BulletHole>();
-                foreach (var hole in holes) {
-                    GameObject.Destroy(hole.gameObject);
-                }
-
-                Transform decal = transform.Find("Decal");
-                if (decal) {
-                    GameObject.Destroy(decal.gameObject);
-                }
             }
         }
 
