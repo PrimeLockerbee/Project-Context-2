@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState
+{
+    IDLE,
+    RUNNING,
+    SPRINTING,
+    GROUNDPOUND,
+    HOLDINGOBJECT
+}
+
 public class ThirdPersonCharacterController : MonoBehaviour
 {
     public float startSpeed;
@@ -9,23 +18,19 @@ public class ThirdPersonCharacterController : MonoBehaviour
     public float sprintSpeed;
     public float jumpForce;
     public float groundPoundForce;
+    public float pickUpRange;
 
+    
     private Vector3 movement;
     private Rigidbody playerRigidbody;
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool isSprinting;
     [SerializeField] private bool isGroundPounding;
 
-    private PlayerState playerState;
+    //[SerializeField] private PlayerState playerState = PlayerState.IDLE;
 
-    private enum PlayerState
-    {
-        IDLE,
-        RUNNING,
-        SPRINTING,
-        JUMPING,
-        GROUNDPOUNDING
-    }
+    private bool isHoldingObject = false;
+    private GameObject pickedUpObject;
 
     void Awake()
     {
@@ -35,6 +40,36 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void Update()
     {
+        //switch (playerState)
+        //{
+        //    case PlayerState.IDLE:
+        //        Move();
+        //        Sprint();
+        //        Jump();
+        //        GroundPound();
+        //        PickUpObject();
+        //        break;
+        //    case PlayerState.RUNNING:
+        //        Move();
+        //        Sprint();
+        //        Jump();
+        //        GroundPound();
+        //        PickUpObject();
+        //        break;
+        //    case PlayerState.SPRINTING:
+        //        Move();
+        //        Jump();
+        //        break;
+        //    case PlayerState.GROUNDPOUND:
+        //        GroundPound();
+        //        break;
+        //    case PlayerState.HOLDINGOBJECT:
+        //        Move();
+        //        Jump();
+        //        DropObject();
+        //        break;
+        //}
+
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
@@ -42,6 +77,8 @@ public class ThirdPersonCharacterController : MonoBehaviour
         Sprint();
         Jump();
         GroundPound();
+        PickUpObject();
+        DropObject();
     }
 
     void Move(float h, float v)
@@ -54,20 +91,14 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void Sprint()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) /*&& playerState != PlayerState.GROUNDPOUND*/)
         {
-            isSprinting = true;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            isSprinting = false;
-        }
-        if (isSprinting)
-        {
+            //playerState = PlayerState.SPRINTING;
             speed = sprintSpeed;
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
+            //playerState = PlayerState.RUNNING;
             speed = startSpeed;
         }
     }
@@ -83,15 +114,15 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void GroundPound()
     {
-        if (!isGrounded && Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) /*&& playerState != PlayerState.HOLDINGOBJECT*/)
         {
-            isGroundPounding = true;
+            //playerState = PlayerState.GROUNDPOUND;
+            playerRigidbody.AddForce(Vector3.down * groundPoundForce, ForceMode.Impulse);
         }
-        if (isGroundPounding)
-        {
-            GetComponent<Rigidbody>().AddForce(new Vector3(0f, -groundPoundForce, 0f), ForceMode.Impulse);
-            isGroundPounding = false;
-        }
+        //else if (playerState == PlayerState.GROUNDPOUND && !Input.GetKey(KeyCode.Space))
+        //{
+        //    playerState = PlayerState.IDLE;
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -99,6 +130,78 @@ public class ThirdPersonCharacterController : MonoBehaviour
         if(collision.collider.tag == "Ground")
         {
             isGrounded = true;
+        }
+    }
+
+    void PickUpObject()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && !isHoldingObject)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, pickUpRange))
+            {
+                pickedUpObject = hit.transform.gameObject;
+
+                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
+                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
+                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
+                pickedUpObject.transform.position = transform.position + transform.forward;
+                pickedUpObject.transform.parent = transform;
+                isHoldingObject = true;
+                //playerState = PlayerState.HOLDINGOBJECT;
+            }
+
+            if (Physics.Raycast(transform.position, -transform.forward, out hit, pickUpRange))
+            {
+                pickedUpObject = hit.transform.gameObject;
+
+                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
+                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
+                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
+                pickedUpObject.transform.position = transform.position + transform.forward;
+                pickedUpObject.transform.parent = transform;
+                isHoldingObject = true;
+                //playerState = PlayerState.HOLDINGOBJECT;
+            }
+
+            if (Physics.Raycast(transform.position, transform.right, out hit, pickUpRange))
+            {
+                pickedUpObject = hit.transform.gameObject;
+
+                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
+                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
+                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
+                pickedUpObject.transform.position = transform.position + transform.forward;
+                pickedUpObject.transform.parent = transform;
+                isHoldingObject = true;
+                //playerState = PlayerState.HOLDINGOBJECT;
+            }
+
+            if (Physics.Raycast(transform.position, -transform.right, out hit, pickUpRange))
+            {
+                pickedUpObject = hit.transform.gameObject;
+
+                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
+                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
+                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
+                pickedUpObject.transform.position = transform.position + transform.forward;
+                pickedUpObject.transform.parent = transform;
+                isHoldingObject = true;
+                //playerState = PlayerState.HOLDINGOBJECT;
+            }
+        }
+    }
+
+    void DropObject()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && isHoldingObject)
+        {
+            pickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
+            pickedUpObject.GetComponent<Rigidbody>().useGravity = true;
+            pickedUpObject.GetComponent<BoxCollider>().enabled = true;
+            pickedUpObject.transform.parent = null;
+            isHoldingObject = false;
+            //playerState = PlayerState.IDLE;
         }
     }
 }
