@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-#if INVECTOR_BASIC || INVECTOR_AI_TEMPLATE
-using Invector;
-#endif
 
-namespace BNG {
     /// <summary>
     /// A basic damage implementation. Call a function on death. Allow for respawning.
     /// </summary>
@@ -200,4 +196,3 @@ namespace BNG {
             }
         }
     }
-}
