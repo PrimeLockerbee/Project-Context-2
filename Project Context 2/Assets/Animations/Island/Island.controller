@@ -214,7 +214,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: Debree
+    m_Name: Debree level
     m_StateMachine: {fileID: 4401848260822611929}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -251,7 +251,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Debree
+  m_Name: Debree level
   m_ChildStates: []
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
