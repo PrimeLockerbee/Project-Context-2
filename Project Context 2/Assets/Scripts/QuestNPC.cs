@@ -14,9 +14,9 @@ public class QuestNPC : MonoBehaviour
 
     private int dialogueIndex = 0;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
             // Show dialogue options when player enters the NPC's trigger area
             ShowDialogue();
