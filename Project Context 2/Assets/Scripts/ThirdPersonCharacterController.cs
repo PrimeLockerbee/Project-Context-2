@@ -14,7 +14,7 @@ public enum PlayerState
 public class ThirdPersonCharacterController : MonoBehaviour
 {
     public float startSpeed;
-    private float speed;
+    [SerializeField] private float speed;
     public float sprintSpeed;
     public float jumpForce;
     public float groundPoundForce;
@@ -30,9 +30,12 @@ public class ThirdPersonCharacterController : MonoBehaviour
     private bool isHoldingObject = false;
     private GameObject pickedUpObject;
 
+    private Animator _anim;
+
     void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
+        _anim = GetComponent<Animator>();
         speed = startSpeed;
     }
 
@@ -47,6 +50,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
         GroundPound();
         PickUpObject();
         DropObject();
+
     }
 
     void Move(float h, float v)
@@ -106,7 +110,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
                 pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + transform.forward;
+                pickedUpObject.transform.position = transform.position +  new Vector3(0, 2, 1.5f);
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
             }
@@ -118,7 +122,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
                 pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + transform.forward;
+                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
             }
@@ -130,7 +134,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
                 pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + transform.forward;
+                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
             }
@@ -142,7 +146,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
                 pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + transform.forward;
+                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
             }
