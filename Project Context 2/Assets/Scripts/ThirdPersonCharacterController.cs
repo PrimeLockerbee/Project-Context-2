@@ -27,8 +27,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
     [SerializeField] private bool isSprinting;
     [SerializeField] private bool isGroundPounding;
 
-    //[SerializeField] private PlayerState playerState = PlayerState.IDLE;
-
     private bool isHoldingObject = false;
     private GameObject pickedUpObject;
 
@@ -40,36 +38,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void Update()
     {
-        //switch (playerState)
-        //{
-        //    case PlayerState.IDLE:
-        //        Move();
-        //        Sprint();
-        //        Jump();
-        //        GroundPound();
-        //        PickUpObject();
-        //        break;
-        //    case PlayerState.RUNNING:
-        //        Move();
-        //        Sprint();
-        //        Jump();
-        //        GroundPound();
-        //        PickUpObject();
-        //        break;
-        //    case PlayerState.SPRINTING:
-        //        Move();
-        //        Jump();
-        //        break;
-        //    case PlayerState.GROUNDPOUND:
-        //        GroundPound();
-        //        break;
-        //    case PlayerState.HOLDINGOBJECT:
-        //        Move();
-        //        Jump();
-        //        DropObject();
-        //        break;
-        //}
-
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
@@ -91,14 +59,12 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void Sprint()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) /*&& playerState != PlayerState.GROUNDPOUND*/)
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            //playerState = PlayerState.SPRINTING;
             speed = sprintSpeed;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            //playerState = PlayerState.RUNNING;
             speed = startSpeed;
         }
     }
@@ -114,15 +80,10 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void GroundPound()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) /*&& playerState != PlayerState.HOLDINGOBJECT*/)
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            //playerState = PlayerState.GROUNDPOUND;
             playerRigidbody.AddForce(Vector3.down * groundPoundForce, ForceMode.Impulse);
         }
-        //else if (playerState == PlayerState.GROUNDPOUND && !Input.GetKey(KeyCode.Space))
-        //{
-        //    playerState = PlayerState.IDLE;
-        //}
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -148,7 +109,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 pickedUpObject.transform.position = transform.position + transform.forward;
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
-                //playerState = PlayerState.HOLDINGOBJECT;
             }
 
             if (Physics.Raycast(transform.position, -transform.forward, out hit, pickUpRange))
@@ -161,7 +121,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 pickedUpObject.transform.position = transform.position + transform.forward;
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
-                //playerState = PlayerState.HOLDINGOBJECT;
             }
 
             if (Physics.Raycast(transform.position, transform.right, out hit, pickUpRange))
@@ -174,7 +133,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 pickedUpObject.transform.position = transform.position + transform.forward;
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
-                //playerState = PlayerState.HOLDINGOBJECT;
             }
 
             if (Physics.Raycast(transform.position, -transform.right, out hit, pickUpRange))
@@ -187,7 +145,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 pickedUpObject.transform.position = transform.position + transform.forward;
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
-                //playerState = PlayerState.HOLDINGOBJECT;
             }
         }
     }
@@ -201,7 +158,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
             pickedUpObject.GetComponent<BoxCollider>().enabled = true;
             pickedUpObject.transform.parent = null;
             isHoldingObject = false;
-            //playerState = PlayerState.IDLE;
         }
     }
 }
