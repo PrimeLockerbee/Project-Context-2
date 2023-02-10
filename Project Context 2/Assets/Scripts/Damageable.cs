@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
     /// <summary>
     /// A basic damage implementation. Call a function on death. Allow for respawning.
     /// </summary>
@@ -60,8 +59,8 @@ using UnityEngine.Events;
         [Tooltip("Remove any decals that were parented to this object on death. Useful for clearing unused decals.")]
         public bool RemoveBulletHolesOnDeath = true;
 
-        //[Header("Events")]
-        //[Tooltip("Optional Event to be called when receiving damage. Takes damage amount as a float parameter.")]
+        [Header("Events")]
+        [Tooltip("Optional Event to be called when receiving damage. Takes damage amount as a float parameter.")]
         public FloatEvent onDamaged;
 
         [Tooltip("Optional Event to be called once health is <= 0")]
@@ -164,7 +163,6 @@ using UnityEngine.Events;
             else if (Respawn) {
                 StartCoroutine(RespawnRoutine(RespawnTime));
             }
-
         }
 
         IEnumerator RespawnRoutine(float seconds) {
