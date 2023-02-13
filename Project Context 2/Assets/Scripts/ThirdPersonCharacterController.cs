@@ -32,6 +32,10 @@ public class ThirdPersonCharacterController : MonoBehaviour
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
+    private Vector3 direction = Vector3.zero;
+    private Quaternion targetRotation;
+    private float rotationSpeed = 10.0f;
+
     private Animator _anim;
 
     void Awake()
