@@ -7,12 +7,14 @@ public class QuestNPC : MonoBehaviour
 {
     public string npcName = "QuestNPC";
     public string[] dialogue;
+    public float dialogueDelay = 3f;
 
     public GameObject dialogueContainer;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
     private int dialogueIndex = 0;
+    private Coroutine dialogueRoutine;
 
     private void OnTriggerStay(Collider other)
     {
@@ -38,13 +40,24 @@ public class QuestNPC : MonoBehaviour
         dialogueIndex = 0;
         UpdateDialogue();
         dialogueContainer.SetActive(true);
+        dialogueRoutine = StartCoroutine(WaitForDialogue());
     }
 
     public void HideDialogue()
     {
         // Hide the NPC's name and dialogue from the screen
         dialogueContainer.SetActive(false);
+        StopCoroutine(dialogueRoutine);
     }
+
+    private IEnumerator WaitForDialogue()
+    {
+        while (dialogueIndex < dialogue.Length)
+        {
+            yield return new WaitForSeconds(dialogueDelay);
+            NextDialogue();
+        }
+    } 
 
     public void NextDialogue()
     {

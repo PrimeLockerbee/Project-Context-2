@@ -32,6 +32,10 @@ public class ThirdPersonCharacterController : MonoBehaviour
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
+    private Vector3 direction = Vector3.zero;
+    private Quaternion targetRotation;
+    private float rotationSpeed = 10.0f;
+
     private Animator _anim;
 
     void Awake()
@@ -68,10 +72,25 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void Move(float h, float v)
     {
-        movement.Set(h, 0f, v);
-        movement = movement.normalized * speed * Time.deltaTime;
+        
 
-        transform.Translate(movement, Space.World);
+        direction = new Vector3(h, 0, v);
+
+        if (direction.magnitude > 0.1f)
+        {
+            targetRotation = Quaternion.LookRotation(direction);
+        }
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+
+        //Rigidbody based movement
+        Vector3 movement = new Vector3(h, 0f, v);
+        playerRigidbody.AddForce(movement * speed);
+
+        ////Transform.translate based movement
+        //movement.Set(h, 0f, v);
+        //movement = movement.normalized * speed * Time.deltaTime;
+        //transform.Translate(movement, Space.World);
     }
 
     void Sprint()
