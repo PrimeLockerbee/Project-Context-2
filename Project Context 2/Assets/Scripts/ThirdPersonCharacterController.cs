@@ -72,16 +72,16 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void Move(float h, float v)
     {
-        
 
-        direction = new Vector3(h, 0, v);
 
-        if (direction.magnitude > 0.1f)
-        {
-            targetRotation = Quaternion.LookRotation(direction);
-        }
+        //direction = new Vector3(h, 0, v);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        //if (direction.magnitude > 0.1f)
+        //{
+        //    targetRotation = Quaternion.LookRotation(direction);
+        //}
+
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
 
         ////Rigidbody based movement
         //Vector3 movement = new Vector3(h, 0f, v);
@@ -137,6 +137,8 @@ public class ThirdPersonCharacterController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(pickupRaycastStart.position, pickupRaycastStart.forward, out hit, pickupRaycastDistance))
         {
+            Debug.Log(hit.transform.gameObject.name);
+
             if (hit.transform.CompareTag("Pickup"))
             {
                 pickedUpObject = hit.transform.gameObject;
@@ -149,7 +151,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 isHoldingObject = true;
             }
         }
-        if (Physics.Raycast(transform.position, -transform.forward, out hit, pickUpRange))
+        if (Physics.Raycast(pickupRaycastStart.position, -pickupRaycastStart.forward, out hit, pickUpRange))
         {
             if (hit.transform.CompareTag("Pickup"))
             {
@@ -164,7 +166,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
             }
         }
 
-        if (Physics.Raycast(transform.position, transform.right, out hit, pickUpRange))
+        if (Physics.Raycast(pickupRaycastStart.position, pickupRaycastStart.right, out hit, pickUpRange))
         {
             if (hit.transform.CompareTag("Pickup"))
             {
@@ -179,7 +181,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
             }
         }
 
-        if (Physics.Raycast(transform.position, -transform.right, out hit, pickUpRange))
+        if (Physics.Raycast(pickupRaycastStart.position, -pickupRaycastStart.right, out hit, pickUpRange))
         {
             if (hit.transform.CompareTag("Pickup"))
             {
