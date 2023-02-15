@@ -2686,6 +2686,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 9.7483225, z: 10}
   m_Center: {x: 0, y: 4.224137, z: 0}
+--- !u!54 &1329581198 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 606727842126825769, guid: 89713b3d04c522845b5d0189f27b4d69, type: 3}
+  m_PrefabInstance: {fileID: 33901768865422839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1337355515
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,9 +3550,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.8230894
-  m_Height: 2.33714
+  m_Height: 2.2997093
   m_Direction: 1
-  m_Center: {x: -0.030281603, y: 1.1651983, z: 0}
+  m_Center: {x: -0.030281603, y: 1.1839137, z: 0}
 --- !u!114 &1720537237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4453,6 +4458,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 606727842126825768, guid: 89713b3d04c522845b5d0189f27b4d69, type: 3}
+      propertyPath: ColliderRigidbody
+      value: 
+      objectReference: {fileID: 1329581198}
     - target: {fileID: 606727842126825771, guid: 89713b3d04c522845b5d0189f27b4d69, type: 3}
       propertyPath: m_RootOrder
       value: 1
