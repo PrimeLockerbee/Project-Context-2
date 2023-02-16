@@ -107,10 +107,14 @@ public class ThirdPersonCharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed = sprintSpeed;
+            _anim.SetBool("Sprint", true);
+            _anim.SetBool("Walk", false);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             speed = startSpeed;
+            _anim.SetBool("Sprint", false);
+            _anim.SetBool("Walk", true);
         }
     }
 
