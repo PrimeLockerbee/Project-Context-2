@@ -68,6 +68,15 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 DropObject();
             }
         }
+
+        if (h == 0 && v == 0)
+        {
+            _anim.SetBool("Walk", false);
+        }
+        else
+        {
+            _anim.SetBool("Walk", true);
+        }
     }
 
     void Move(float h, float v)
