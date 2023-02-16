@@ -74,14 +74,14 @@ public class ThirdPersonCharacterController : MonoBehaviour
     {
 
 
-        //direction = new Vector3(h, 0, v);
+        direction = new Vector3(h, 0, v);
 
-        //if (direction.magnitude > 0.1f)
-        //{
-        //    targetRotation = Quaternion.LookRotation(direction);
-        //}
+        if (direction.magnitude > 0.1f)
+        {
+            targetRotation = Quaternion.LookRotation(direction);
+        }
 
-        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
 
         ////Rigidbody based movement
         //Vector3 movement = new Vector3(h, 0f, v);
@@ -139,50 +139,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
         {
             Debug.Log(hit.transform.gameObject.name);
 
-            if (hit.transform.CompareTag("Pickup"))
-            {
-                pickedUpObject = hit.transform.gameObject;
-
-                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
-                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
-                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
-                pickedUpObject.transform.parent = transform;
-                isHoldingObject = true;
-            }
-        }
-        if (Physics.Raycast(pickupRaycastStart.position, -pickupRaycastStart.forward, out hit, pickUpRange))
-        {
-            if (hit.transform.CompareTag("Pickup"))
-            {
-                pickedUpObject = hit.transform.gameObject;
-
-                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
-                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
-                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
-                pickedUpObject.transform.parent = transform;
-                isHoldingObject = true;
-            }
-        }
-
-        if (Physics.Raycast(pickupRaycastStart.position, pickupRaycastStart.right, out hit, pickUpRange))
-        {
-            if (hit.transform.CompareTag("Pickup"))
-            {
-                pickedUpObject = hit.transform.gameObject;
-
-                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
-                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
-                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
-                pickedUpObject.transform.parent = transform;
-                isHoldingObject = true;
-            }
-        }
-
-        if (Physics.Raycast(pickupRaycastStart.position, -pickupRaycastStart.right, out hit, pickUpRange))
-        {
             if (hit.transform.CompareTag("Pickup"))
             {
                 pickedUpObject = hit.transform.gameObject;
