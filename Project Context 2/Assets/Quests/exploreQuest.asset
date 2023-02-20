@@ -1,6 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8108166283645939911
+--- !u!114 &-7580279352899380283
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: You moved south.
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+--- !u!114 &-6711587399174058120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: Go move south.
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+--- !u!114 &-1566740782487140868
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +56,7 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_headingLevel: 1
---- !u!114 &-7341546270206656569
+--- !u!114 &-1521839920403248580
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,96 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: Find the coins somewhere around here.
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
---- !u!114 &-3441193365586336073
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: I lost all my coins, could you help me by collecting them?
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
---- !u!114 &-2902748875829283947
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b99cc2a156c22e46b4fb74b06a4d1e8, type: 3}
-  m_Name: AlertQuestAction
-  m_EditorClassIdentifier: 
-  m_contentList:
-  - {fileID: -333081942404159805}
-  m_contentListSerializationProxy: []
---- !u!114 &-2753590916653951139
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
-  m_Name: HeadingTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_useQuestTitle: 1
-  m_headingText:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_headingLevel: 1
---- !u!114 &-1361474226561232334
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: Please find my coins.
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
---- !u!114 &-333081942404159805
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: Found all coins!
+    m_text: Move south
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -137,18 +84,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 641a501636ec3644993211c008d9a8a4, type: 3}
-  m_Name: CollectCoin
+  m_Name: exploreQuest
   m_EditorClassIdentifier: 
   m_isInstance: 0
   m_originalAsset: {fileID: 0}
   m_fileVersion: 1
   m_id:
-    m_text: CollectCoin
+    m_text: exploreQuest
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_title:
-    m_text: CollectCoin
+    m_text: Move to the South
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -180,7 +127,7 @@ MonoBehaviour:
     m_numTrueConditions: 0
   m_offerConditionsUnmetContentList: []
   m_offerContentList:
-  - {fileID: -3441193365586336073}
+  - {fileID: 686708837545423123}
   m_maxTimes: 1
   m_timesAccepted: 0
   m_cooldownSeconds: 3600
@@ -196,22 +143,18 @@ MonoBehaviour:
     - m_contentList: []
   - m_actionList: []
     m_categorizedContentList:
-    - m_contentList: []
     - m_contentList:
-      - {fileID: -2753590916653951139}
+      - {fileID: -1566740782487140868}
     - m_contentList:
-      - {fileID: 7422487223940414282}
-  - m_actionList: []
-    m_categorizedContentList:
+      - {fileID: 8607205881171656389}
     - m_contentList:
-      - {fileID: 6825315327371119300}
-    - m_contentList:
-      - {fileID: -8108166283645939911}
-    - m_contentList: []
+      - {fileID: 4460405940336778920}
   - m_actionList: []
     m_categorizedContentList:
     - m_contentList: []
-    - m_contentList: []
+    - m_contentList:
+      - {fileID: 4482171003450658249}
+      - {fileID: -7580279352899380283}
     - m_contentList: []
   - m_actionList: []
     m_categorizedContentList:
@@ -223,45 +166,15 @@ MonoBehaviour:
     - m_contentList: []
     - m_contentList: []
     - m_contentList: []
-  m_counterList:
-  - m_name:
-      m_text: Coins
-      m_stringAsset: {fileID: 0}
-      m_textTable: {fileID: 0}
-      m_textTableFieldID: 0
-    m_currentValue: 0
-    m_randomizeInitialValue: 0
-    m_minValue: 0
-    m_maxValue: 5
-    m_updateMode: 1
-    m_messageEventList:
-    - m_senderSpecifier: 0
-      m_senderID:
-        m_text: 
-        m_stringAsset: {fileID: 0}
-        m_textTable: {fileID: 0}
-        m_textTableFieldID: 0
-      m_targetSpecifier: 0
-      m_targetID:
-        m_text: 
-        m_stringAsset: {fileID: 0}
-        m_textTable: {fileID: 0}
-        m_textTableFieldID: 0
-      m_message:
-        m_text: Get
-        m_stringAsset: {fileID: 0}
-        m_textTable: {fileID: 0}
-        m_textTableFieldID: 0
-      m_parameter:
-        m_text: Coin
-        m_stringAsset: {fileID: 0}
-        m_textTable: {fileID: 0}
-        m_textTableFieldID: 0
-      m_operation: 2
-      m_literalValue: 1
+  - m_actionList: []
+    m_categorizedContentList:
+    - m_contentList: []
+    - m_contentList: []
+    - m_contentList: []
+  m_counterList: []
   m_nodeList:
   - m_id:
-      m_text: Quest-22582.start
+      m_text: Quest-35918.start
       m_stringAsset: {fileID: 0}
       m_textTable: {fileID: 0}
       m_textTableFieldID: 0
@@ -302,17 +215,17 @@ MonoBehaviour:
     m_childIndexList: 01000000
     m_canvasRect:
       serializedVersion: 2
-      x: 128
-      y: 20
+      x: 85
+      y: 77
       width: 120
       height: 48
   - m_id:
-      m_text: Condition 1
+      m_text: Move to South island
       m_stringAsset: {fileID: 0}
       m_textTable: {fileID: 0}
       m_textTableFieldID: 0
     m_internalName:
-      m_text: Find Coins
+      m_text: 
       m_stringAsset: {fileID: 0}
       m_textTable: {fileID: 0}
       m_textTableFieldID: 0
@@ -333,28 +246,28 @@ MonoBehaviour:
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList:
-        - {fileID: -1361474226561232334}
+        - {fileID: -6711587399174058120}
       - m_contentList:
-        - {fileID: -7341546270206656569}
+        - {fileID: 5210074033771616547}
       - m_contentList:
-        - {fileID: 2825823605726602218}
-    - m_actionList: []
+        - {fileID: -1521839920403248580}
+    - m_actionList:
+      - {fileID: 982691973022877016}
       m_categorizedContentList:
       - m_contentList: []
-      - m_contentList:
-        - {fileID: 8161809644283464896}
+      - m_contentList: []
       - m_contentList: []
     m_conditionSet:
       m_conditionList:
-      - {fileID: 4264964641667954235}
+      - {fileID: 3104310070981182883}
       m_conditionCountMode: 1
       m_minConditionCount: 0
       m_numTrueConditions: 0
     m_childIndexList: 02000000
     m_canvasRect:
       serializedVersion: 2
-      x: 132
-      y: 123
+      x: 85
+      y: 145
       width: 120
       height: 48
   - m_id:
@@ -377,17 +290,13 @@ MonoBehaviour:
       m_textTableFieldID: 0
     m_stateInfoList:
     - m_actionList: []
-      m_categorizedContentList:
-      - m_contentList: []
-      - m_contentList: []
-      - m_contentList: []
+      m_categorizedContentList: []
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
       - m_contentList: []
-    - m_actionList:
-      - {fileID: -2902748875829283947}
+    - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -400,13 +309,13 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 139
-      y: 215
+      x: 85
+      y: 213
       width: 120
       height: 35
   m_goalEntityTypeName: 
   m_nextContentID: 0
---- !u!114 &2825823605726602218
+--- !u!114 &686708837545423123
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -420,11 +329,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: '{#coins}/3 Coins'
+    m_text: We need you to move to the South part of the island.
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
---- !u!114 &4264964641667954235
+--- !u!114 &982691973022877016
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -433,34 +342,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
+  m_Script: {fileID: 11500000, guid: 6b99cc2a156c22e46b4fb74b06a4d1e8, type: 3}
+  m_Name: AlertQuestAction
   m_EditorClassIdentifier: 
-  m_counterIndex: 0
-  m_counterValueMode: 0
-  m_requiredCounterValue:
+  m_contentList:
+  - {fileID: 1325794509235864352}
+  m_contentListSerializationProxy: []
+--- !u!114 &1325794509235864352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: 'Complete: Move south'
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+--- !u!114 &3104310070981182883
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
+  m_Name: MessageQuestCondition
+  m_EditorClassIdentifier: 
+  m_senderSpecifier: 0
+  m_senderID:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_targetSpecifier: 0
+  m_targetID:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_message:
+    m_text: Move
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_parameter:
+    m_text: South
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_value:
     m_valueType: 0
-    m_literalValue: 3
-    m_counterIndex: 0
---- !u!114 &6825315327371119300
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: Thank you for helping me find my coins!
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
---- !u!114 &7422487223940414282
+    m_intValue: 0
+    m_stringValue: 
+--- !u!114 &4460405940336778920
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -480,7 +424,27 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_headingLevel: 1
---- !u!114 &8161809644283464896
+--- !u!114 &4482171003450658249
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
+  m_Name: HeadingTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_useQuestTitle: 1
+  m_headingText:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_headingLevel: 1
+--- !u!114 &5210074033771616547
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,7 +458,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: You found the man his coins!
+    m_text: Move to the osuh part of the island.
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &8607205881171656389
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
+  m_Name: HeadingTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_useQuestTitle: 1
+  m_headingText:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_headingLevel: 1
