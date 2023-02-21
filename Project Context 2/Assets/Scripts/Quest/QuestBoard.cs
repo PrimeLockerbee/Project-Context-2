@@ -9,21 +9,21 @@ public class QuestBoard : MonoBehaviour
 
     private void Start()
     {
-        QuestPanel.SetActive(false);
+        //QuestPanel.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
         {
-            QuestPanel.SetActive(true);
+            //QuestPanel.SetActive(true);
             Time.timeScale = 0.001f;
         }
     }
 
     public void ResumeGame()
     {
-        QuestPanel.SetActive(false);
+        //QuestPanel.SetActive(false);
         Time.timeScale = 1f;
     }
 }
