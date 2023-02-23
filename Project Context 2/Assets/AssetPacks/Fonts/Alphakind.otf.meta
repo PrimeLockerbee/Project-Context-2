@@ -10,10 +10,13 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - Alphakind
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e2bdcaa756a7849f2926cab87d5c16aa, type: 3}
+  - {fileID: 12800000, guid: 1bb6f4713c108412e87a80b91891b52e, type: 3}
+  - {fileID: 12800000, guid: 8198c337f4bf2427fb22aa16aa0aed37, type: 3}
   customCharacters: 
   fontRenderingMode: 0
-  ascentCalculationMode: 1
+  ascentCalculationMode: 2
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
   userData: 

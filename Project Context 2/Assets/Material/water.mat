@@ -73,6 +73,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_8bb0180a23684653b388f531760f5a4e_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4f3245ae0c44aac499266013c0c760c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_a9bccf875f314ec68f42a64da6627fe7_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d78f9838699840e5a45ddcc41808ac64_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4f3245ae0c44aac499266013c0c760c7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -107,6 +119,7 @@ Material:
     - _Float_2: 1.15
     - _Float_3: -33.5
     - _Float_4: 2.4
+    - _Float_5: 0.049
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -127,9 +140,10 @@ Material:
     - _ZWrite: 1
     - _edge: -24.09
     - _frenel: 71.55
-    - _noise_size: 10000
+    - _noise_size: 7859.8
+    - _power_noraml: 0.004
     - _second_edge: 93.4
-    - _smoothness: 1.25
+    - _smoothness: 1
     - _speed: 0.0001
     - _water_edge: 6.04
     - _water_edge_thiccness: -2.08
