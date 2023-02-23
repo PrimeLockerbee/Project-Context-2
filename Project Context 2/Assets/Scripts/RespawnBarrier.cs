@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class RespawnBarrier : MonoBehaviour
 {
+    public Vector3 spawnposition;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            other.transform.position = new Vector3(0, 0, 0);
+            other.transform.position = spawnposition;
         }
     }
 }

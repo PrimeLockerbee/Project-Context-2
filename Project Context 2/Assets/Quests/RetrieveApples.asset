@@ -155,7 +155,7 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
-  m_icon: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: c8b169cef698b3349bed4b8d0a2d9c76, type: 3}
   m_group:
     m_text: 
     m_stringAsset: {fileID: 0}
