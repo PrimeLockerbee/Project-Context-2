@@ -343,7 +343,10 @@ MonoBehaviour:
       - m_contentList:
         - {fileID: -8509970894499485773}
     - m_actionList: []
-      m_categorizedContentList: []
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList: []
+      - m_contentList: []
     m_conditionSet:
       m_conditionList:
       - {fileID: 6583066565880557597}
@@ -657,7 +660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: Retrive those apples.
+    m_text: Retrieve those apples.
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
