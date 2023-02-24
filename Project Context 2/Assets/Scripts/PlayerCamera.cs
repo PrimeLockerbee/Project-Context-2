@@ -10,6 +10,6 @@ public class PlayerCamera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.transform.position + cameraOffset;
+        transform.position = player.transform.position;
     }
 }

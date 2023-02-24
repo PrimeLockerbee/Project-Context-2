@@ -392,7 +392,10 @@ MonoBehaviour:
       m_textTableFieldID: 0
     m_stateInfoList:
     - m_actionList: []
-      m_categorizedContentList: []
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList: []
+      - m_contentList: []
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
