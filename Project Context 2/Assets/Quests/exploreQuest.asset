@@ -36,6 +36,33 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &-5825055368295400929
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9840a28297a53d449903f34dc60157bb, type: 3}
+  m_Name: UnityEventQuestAction
+  m_EditorClassIdentifier: 
+  m_onExecute:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2807561954641718673, guid: 3a0c9b3751693374689d2b2668e8aa91, type: 3}
+        m_TargetAssemblyTypeName: AdderSubstracter, Assembly-CSharp
+        m_MethodName: SubstractFromState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-1566740782487140868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +176,8 @@ MonoBehaviour:
       - {fileID: 8607205881171656389}
     - m_contentList:
       - {fileID: 4460405940336778920}
-  - m_actionList: []
+  - m_actionList:
+    - {fileID: -5825055368295400929}
     m_categorizedContentList:
     - m_contentList: []
     - m_contentList:

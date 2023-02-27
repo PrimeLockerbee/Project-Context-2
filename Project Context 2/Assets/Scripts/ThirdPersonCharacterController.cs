@@ -81,8 +81,6 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     void Move(float h, float v)
     {
-
-
         direction = new Vector3(h, 0, v);
 
         if (direction.magnitude > 0.1f)
@@ -93,7 +91,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
 
         ////Rigidbody based movement
-        //Vector3 movement = new Vector3(h, 0f, v);
+        //movement = new Vector3(h, 0f, v);
         //playerRigidbody.AddForce(movement * speed);
 
         //Transform.translate based movement
