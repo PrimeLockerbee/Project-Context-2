@@ -6,6 +6,8 @@ public class IslandStateKeeper : MonoBehaviour
 {
     [SerializeField] public int i_SouthIslandState = 0;
 
+    [SerializeField] public Camera endcam;
+
 
     [SerializeField] public Renderer waterMaterial;
     [SerializeField] public Material badMaterial;
@@ -23,23 +25,26 @@ public class IslandStateKeeper : MonoBehaviour
 
     void Update()
     {
-        CheckIfDone();
+       CheckIfDone();
     }
 
-    void CheckIfDone()
+    public void CheckIfDone()
     {
-        if (i_SouthIslandState < 0)
+        //endcam.depth = Camera.main.depth + 2;
+        
+        if (i_SouthIslandState == -2)
         {
-
-            StartCoroutine(WaitSecondsBad());
+            //endcam.depth = Camera.main.depth + 2;
+            //StartCoroutine(WaitSecondsBad());
 
         }
-        if (i_SouthIslandState > 0)
+        if (i_SouthIslandState == 2)
         {
-
-            StartCoroutine(WaitSecondsGood());
+           // endcam.depth = Camera.main.depth + 2;
+            //StartCoroutine(WaitSecondsGood());
 
         }
+        
     }
 
     IEnumerator WaitSecondsGood()
