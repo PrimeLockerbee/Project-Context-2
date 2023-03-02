@@ -356,6 +356,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -571,7 +573,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 468
+        x: 467
         y: 84
         width: 160
         height: 30
@@ -642,7 +644,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 720
+        x: 721
         y: 84
         width: 160
         height: 30
@@ -987,7 +989,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 215, y: 0}
+    canvasScrollPosition: {x: 47, y: 0}
     canvasZoom: 1
   - id: 2
     fields:
@@ -1025,6 +1027,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -1679,6 +1683,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -2006,6 +2012,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -2640,6 +2648,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
