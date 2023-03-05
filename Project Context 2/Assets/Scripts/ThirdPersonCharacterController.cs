@@ -90,14 +90,14 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
 
-        ////Rigidbody based movement
-        //movement = new Vector3(h, 0f, v);
-        //playerRigidbody.AddForce(movement * speed);
+        //Rigidbody based movement
+        movement = new Vector3(h, 0f, v);
+        playerRigidbody.AddForce(movement * speed);
 
-        //Transform.translate based movement
-        movement.Set(h, 0f, v);
-        movement = movement.normalized * speed * Time.deltaTime;
-        transform.Translate(movement, Space.World);
+        ////Transform.translate based movement
+        //movement.Set(h, 0f, v);
+        //movement = movement.normalized * speed * Time.deltaTime;
+        //transform.Translate(movement, Space.World);
     }
 
     void Sprint()
