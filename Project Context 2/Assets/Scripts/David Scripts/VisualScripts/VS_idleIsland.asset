@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: VS_idleIsland
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":147.0,"y":-1.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-205.0,"y":-215.0},"guid":"33c663d6-9807-4438-8736-62bd2871338a","$version":"A","$type":"Unity.VisualScripting.OnEnterState"},{"coroutine":false,"defaultValues":{},"position":{"x":-195.0,"y":-43.0},"guid":"4bc04fd8-4a90-4b07-946c-cf4d7676e0ae","$version":"A","$type":"Unity.VisualScripting.Update"},{"coroutine":false,"defaultValues":{},"position":{"x":-155.0,"y":115.0},"guid":"7c4922dd-feba-4ef3-b55e-61c13840a683","$version":"A","$type":"Unity.VisualScripting.OnExitState"}],"$version":"A"}}'
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":147.0,"y":-1.0},"zoom":1.0,"elements":[],"$version":"A"}}'
     _objectReferences: []
