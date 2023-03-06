@@ -33,11 +33,15 @@ public class FPSController : MonoBehaviour
 
     void Update()
     {
-        float v = Input.GetAxisRaw("Vertical");
-        float h = Input.GetAxisRaw("Horizontal");
+        // Lock and hide the cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
-        // Rotate the character using A and D keys
-        transform.Rotate(0, h * rotationSpeed * Time.deltaTime, 0);
+        float v = Input.GetAxisRaw("Vertical");
+
+        // Rotate the character using mouse position
+        float mouseX = Input.GetAxis("Mouse X");
+        transform.Rotate(0, mouseX * rotationSpeed * Time.deltaTime, 0);
 
         // Move the character forward and backward using W and S keys
         Vector3 forward = transform.forward * v * walkingSpeed;
