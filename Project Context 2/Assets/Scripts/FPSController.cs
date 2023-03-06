@@ -25,6 +25,8 @@ public class FPSController : MonoBehaviour
 
     private float rotationSpeed = 100.0f;
 
+    private int smashDropHeight = 500;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -74,6 +76,24 @@ public class FPSController : MonoBehaviour
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, /*smashRadius*/ 2);
+            foreach (Collider hitCollider in hitColliders)
+            {
+                if (hitCollider.CompareTag("Enemy"))
+                {
+                    //Enemy enemy = hitCollider.GetComponent<Enemy>();
+                    //if (enemy != null)
+                    //{
+                        //enemy.TakeDamage(smashDamage);
+                    //}
+                }
+            }
+            moveDirection.y -= smashDropHeight;
+        }
+
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
