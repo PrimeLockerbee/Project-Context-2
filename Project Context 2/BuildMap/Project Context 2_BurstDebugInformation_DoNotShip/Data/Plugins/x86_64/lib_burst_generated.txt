@@ -1,4 +1,4 @@
-Library: D:\School\Project Context 2\Project-Context-2\Project Context 2\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
+Library: E:\Fork\Project-Context-2\Project Context 2\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --platform=Windows
 --backend=burst-llvm-14
 --target=AVX2
@@ -136,8 +136,8 @@ Library: D:\School\Project Context 2\Project-Context-2\Project Context 2\Temp\St
 --compilation-defines=VFX_HAS_AUDIO
 --linker-options=PdbAltPath="Project Context 2_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\School\Project Context 2\Project-Context-2\Project Context 2\Temp\Burst
---output=D:\School\Project Context 2\Project-Context-2\Project Context 2\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
+--temp-folder=E:\Fork\Project-Context-2\Project Context 2\Temp\Burst
+--output=E:\Fork\Project-Context-2\Project Context 2\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 --pdb-search-paths=Temp/ManagedSymbols/
 
@@ -291,8 +291,8 @@ Library: D:\School\Project Context 2\Project-Context-2\Project Context 2\Temp\St
 --compilation-defines=VFX_HAS_AUDIO
 --linker-options=PdbAltPath="Project Context 2_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\School\Project Context 2\Project-Context-2\Project Context 2\Temp\Burst
---output=D:\School\Project Context 2\Project-Context-2\Project Context 2\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
+--temp-folder=E:\Fork\Project-Context-2\Project Context 2\Temp\Burst
+--output=E:\Fork\Project-Context-2\Project Context 2\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 --pdb-search-paths=Temp/ManagedSymbols/
 
