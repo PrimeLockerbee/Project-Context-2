@@ -23,6 +23,8 @@ public class FPSController : MonoBehaviour
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
+    private Vector3 direction;
+    private Quaternion targetRotation;
     private float rotationSpeed = 10.0f;
 
     void Start()
@@ -34,14 +36,26 @@ public class FPSController : MonoBehaviour
 
     void Update()
     {
+        float v = Input.GetAxisRaw("Vertical");
+        float h = Input.GetAxisRaw("Horizontal");
+
+        direction = new Vector3(h, 0, v);
+
+        if (direction.magnitude > 0.1f)
+        {
+            targetRotation = Quaternion.LookRotation(direction);
+        }
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
         // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         bool isCrouchKeyPressed = Input.GetKey(KeyCode.C);
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
+        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * v : 0;
+        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * h : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
@@ -52,7 +66,6 @@ public class FPSController : MonoBehaviour
         else
         {
             _anim.SetBool("Walk", true);
-            //transform.rotation = Quaternion.LookRotation(moveDirection);
         }
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
@@ -85,24 +98,6 @@ public class FPSController : MonoBehaviour
             {
                 DropObject();
             }
-        }
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
-        {
-            Vector3 mousePosition = hit.point;
-
-            // Calculate the direction from the character to the mouse, only considering the y-axis
-            Vector3 directionToMouse = (mousePosition - transform.position);
-            directionToMouse.y = 0f;
-            directionToMouse = directionToMouse.normalized;
-
-            // Calculate the target rotation for the character, only rotating around the y-axis
-            Quaternion targetRotation = Quaternion.LookRotation(directionToMouse, Vector3.up);
-
-            // Smoothly rotate the character towards the target rotation
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 
