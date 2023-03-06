@@ -28,6 +28,8 @@ public class FPSController : MonoBehaviour
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
+    private Vector3 direction = Vector3.zero;
+    private Quaternion targetRotation;
     private float rotationSpeed = 10.0f;
 
     void Start()
@@ -114,24 +116,6 @@ public class FPSController : MonoBehaviour
                 DropObject();
             }
         }
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
-        {
-            Vector3 mousePosition = hit.point;
-
-            // Calculate the direction from the character to the mouse
-            Vector3 directionToMouse = (mousePosition - transform.position).normalized;
-
-            // Calculate the target rotation for the character
-            Quaternion targetRotation = Quaternion.LookRotation(directionToMouse);
-
-            // Smoothly rotate the character towards the target rotation
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        }
-
-
     }
 
     private void PickUpObject()
