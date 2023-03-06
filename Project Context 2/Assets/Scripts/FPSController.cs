@@ -23,14 +23,11 @@ public class FPSController : MonoBehaviour
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
-    private Vector3 direction;
-    private Quaternion targetRotation;
-    private float rotationSpeed = 10.0f;
+    private float rotationSpeed = 100.0f;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-
         _anim = GetComponent<Animator>();
     }
 
@@ -39,33 +36,30 @@ public class FPSController : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");
 
-        direction = new Vector3(h, 0, v);
+        // Rotate the character using A and D keys
+        transform.Rotate(0, h * rotationSpeed * Time.deltaTime, 0);
 
-        if (direction.magnitude > 0.1f)
+        // Move the character forward and backward using W and S keys
+        Vector3 forward = transform.forward * v * walkingSpeed;
+        characterController.SimpleMove(forward);
+
+        if (Input.GetKey(KeyCode.LeftShift))  // check if sprinting key is pressed
         {
-            targetRotation = Quaternion.LookRotation(direction);
-        }
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-
-        // We are grounded, so recalculate move direction based on axes
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-        // Press Left Shift to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        bool isCrouchKeyPressed = Input.GetKey(KeyCode.C);
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * v : 0;
-        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * h : 0;
-        float movementDirectionY = moveDirection.y;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
-        if (curSpeedX == 0 && curSpeedY == 0)
-        {
-            _anim.SetBool("Walk", false);
+            walkingSpeed = runningSpeed;  // if so, set movement speed to sprinting speed
         }
         else
         {
+            walkingSpeed = 5.5f;
+        }
+
+        // Play walk animation when moving
+        if (forward != Vector3.zero)
+        {
             _anim.SetBool("Walk", true);
+        }
+        else
+        {
+            _anim.SetBool("Walk", false);
         }
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
@@ -73,14 +67,6 @@ public class FPSController : MonoBehaviour
             moveDirection.y = jumpSpeed;
         }
         else
-        {
-            moveDirection.y = movementDirectionY;
-        }
-
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
-        if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }

@@ -1835,7 +1835,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 949636778}
   - {fileID: 543450653169235983}
   m_Father: {fileID: 1032109284}
   m_RootOrder: 1
@@ -2630,12 +2629,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949636777}
   m_LocalRotation: {x: 0.19792694, y: -0, z: -0, w: 0.9802168}
-  m_LocalPosition: {x: 0.014961243, y: 23.12727, z: -7.379898}
+  m_LocalPosition: {x: 0, y: 7.699999, z: -7.0499954}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 671996174}
-  m_RootOrder: 0
+  m_Father: {fileID: 543450653169235983}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 22.832, y: 0, z: 0}
 --- !u!114 &949636779
 MonoBehaviour:
@@ -2644,7 +2643,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949636777}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 879aa59a105ccf74386004d8f522d370, type: 3}
   m_Name: 
@@ -8038,8 +8037,9 @@ Transform:
   - {fileID: 8160277322580788248}
   - {fileID: 4444684513124772478}
   - {fileID: 724747532}
+  - {fileID: 949636778}
   m_Father: {fileID: 671996174}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &558083758488632574
 MeshRenderer:
@@ -8181,8 +8181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkingSpeed: 5.5
   runningSpeed: 9.5
-  jumpSpeed: 7
-  gravity: 16
+  jumpSpeed: 8
+  gravity: 14
   canMove: 1
   pickupRaycastStart: {fileID: 724747532}
   pickupRaycastDistance: 5
@@ -8203,7 +8203,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.15, z: 0}
+  m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!1 &1039359633927044763
 GameObject:
   m_ObjectHideFlags: 0
