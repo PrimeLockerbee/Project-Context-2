@@ -13,11 +13,6 @@ public class FPSController : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
 
-    float originalHeight;
-    float crouchHeight = 0.5f;
-    bool isCrouching = false;
-    public float crouchSpeed = 3.0f;
-
     [HideInInspector]
     public bool canMove = true;
 
@@ -28,20 +23,11 @@ public class FPSController : MonoBehaviour
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
-    private Vector3 direction = Vector3.zero;
-    private Quaternion targetRotation;
     private float rotationSpeed = 10.0f;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-
-        //// Lock cursor
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
-
-        // Save the original height of the character controller
-        originalHeight = characterController.height;
 
         _anim = GetComponent<Animator>();
     }
@@ -59,22 +45,6 @@ public class FPSController : MonoBehaviour
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (isCrouchKeyPressed && !isCrouching)
-        {
-            // Crouch
-            isCrouching = true;
-            characterController.height = crouchHeight;
-            curSpeedX = crouchSpeed * Input.GetAxis("Vertical");
-            curSpeedY = crouchSpeed * Input.GetAxis("Horizontal");
-        }
-        else if (!isCrouchKeyPressed && isCrouching)
-        {
-            // Stand up
-            isCrouching = false;
-            characterController.height = originalHeight;
-        }
-
-
         if (curSpeedX == 0 && curSpeedY == 0)
         {
             _anim.SetBool("Walk", false);
@@ -82,7 +52,7 @@ public class FPSController : MonoBehaviour
         else
         {
             _anim.SetBool("Walk", true);
-            transform.rotation = Quaternion.LookRotation(moveDirection);
+            //transform.rotation = Quaternion.LookRotation(moveDirection);
         }
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
@@ -115,6 +85,24 @@ public class FPSController : MonoBehaviour
             {
                 DropObject();
             }
+        }
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            Vector3 mousePosition = hit.point;
+
+            // Calculate the direction from the character to the mouse, only considering the y-axis
+            Vector3 directionToMouse = (mousePosition - transform.position);
+            directionToMouse.y = 0f;
+            directionToMouse = directionToMouse.normalized;
+
+            // Calculate the target rotation for the character, only rotating around the y-axis
+            Quaternion targetRotation = Quaternion.LookRotation(directionToMouse, Vector3.up);
+
+            // Smoothly rotate the character towards the target rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 
