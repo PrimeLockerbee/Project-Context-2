@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: VS_TransistionCheck 1
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"TransitionCheck","summary":"Checks
+      if I_South Island State is -1","pan":{"x":-131.0,"y":18.0},"zoom":1.0,"elements":[{"defaultValues":{},"position":{"x":126.0,"y":-78.0},"guid":"f63c2c2c-8ea8-4b89-bbf9-775c88124757","$version":"A","$type":"Unity.VisualScripting.TriggerStateTransition","$id":"9"},{"defaultValues":{},"position":{"x":-89.0,"y":-90.0},"guid":"7e73f595-3521-4e24-9fc1-f5686d8507b3","$version":"A","$type":"Unity.VisualScripting.If","$id":"11"},{"coroutine":false,"defaultValues":{},"position":{"x":-393.0,"y":-88.0},"guid":"8e7dd3d0-2728-483f-ba34-1f5992adef92","$version":"A","$type":"Unity.VisualScripting.Update","$id":"13"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"GameManager","$type":"System.String"}},"position":{"x":-737.0,"y":24.0},"guid":"1e1af8f9-f772-4611-9c77-33afe6208764","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"15"},{"member":{"name":"i_SouthIslandState","parameterTypes":null,"targetType":"IslandStateKeeper","targetTypeName":"IslandStateKeeper","$version":"A"},"defaultValues":{"target":null},"position":{"x":-519.0,"y":27.0},"guid":"feb82834-c52f-480a-b69b-36c49f3c910d","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"17"},{"numeric":false,"defaultValues":{},"position":{"x":-277.0,"y":37.0},"guid":"b0973f1f-2b8e-4eb3-8a04-64db833a3d08","$version":"A","$type":"Unity.VisualScripting.Equal","$id":"20"},{"type":"System.Single","value":{"$content":-2.0,"$type":"System.Single"},"defaultValues":{},"position":{"x":-422.0,"y":157.0},"guid":"14e03f7c-f66f-41ec-8097-406c6648f5e5","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"22"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"enter","guid":"f260a49e-22d0-40c1-b6f9-9445a85b2a36","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"11"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"9"},"destinationKey":"trigger","guid":"3def378c-b98a-41ae-acc7-9b070c8c75ff","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"value","destinationUnit":{"$ref":"17"},"destinationKey":"target","guid":"6e1b43bb-54e4-4542-800b-80f1b279e7bc","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"value","destinationUnit":{"$ref":"20"},"destinationKey":"a","guid":"a712b2fc-3574-44f8-84e5-5174d0422e67","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"22"},"sourceKey":"output","destinationUnit":{"$ref":"20"},"destinationKey":"b","guid":"e53a4e8d-5b30-4889-b922-7230e511258d","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"20"},"sourceKey":"equal","destinationUnit":{"$ref":"11"},"destinationKey":"condition","guid":"8b41dc64-3522-4b22-bca0-386c8b974c05","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":-426.0,"yMin":-222.0,"xMax":-292.0,"yMax":-122.0},"title":"TransitionCheck","body":"Checks
+      if I_South Island State is -1","colorTheme":"Classic","guid":"ad5a88cd-eb14-40eb-8ff1-fc8debf2ad96","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}}'
+    _objectReferences: []
