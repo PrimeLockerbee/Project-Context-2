@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1053015858}
-  m_IndirectSpecularColor: {r: 0.60162306, g: 0.6152527, b: 0.6192786, a: 1}
+  m_IndirectSpecularColor: {r: 0.601623, g: 0.6152527, b: 0.6192786, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -982,12 +982,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218598064}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -10.6, y: 309.3, z: 0}
+  m_LocalPosition: {x: 32.62504, y: 307.0927, z: 198.21991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 667555412}
-  m_RootOrder: 1
+  m_Father: {fileID: 1950708873}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &222068741
 GameObject:
@@ -1398,8 +1398,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Journal
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2acb956553c21411f9187a318e6f0285, type: 2}
+  m_sharedMaterial: {fileID: -6391363882504980572, guid: 2acb956553c21411f9187a318e6f0285, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2204,7 +2204,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1374197374}
-  - {fileID: 218598067}
   m_Father: {fileID: 792331845}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5121,7 +5120,7 @@ PrefabInstance:
     - target: {fileID: 11409670, guid: f907b1416ebdbf645a73183ab47aa2b8, type: 3}
       propertyPath: m_text.m_uiText
       value: 
-      objectReference: {fileID: 2076196915}
+      objectReference: {fileID: 0}
     - target: {fileID: 11411348, guid: f907b1416ebdbf645a73183ab47aa2b8, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7846,6 +7845,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 218598067}
   - {fileID: 2019868580}
   m_Father: {fileID: 1032109284}
   m_RootOrder: 0
@@ -8001,7 +8001,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1950708873}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!64 &2019868582
 MeshCollider:
@@ -8263,17 +8263,6 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 01109e9de4accda4089c51be367bcb0e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
---- !u!114 &2076196915 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11420694, guid: f907b1416ebdbf645a73183ab47aa2b8, type: 3}
-  m_PrefabInstance: {fileID: 1466048644}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2088819565
 PrefabInstance:
   m_ObjectHideFlags: 0
