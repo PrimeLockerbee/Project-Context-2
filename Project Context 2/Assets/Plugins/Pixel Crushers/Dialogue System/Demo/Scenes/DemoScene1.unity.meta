@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Project Context 2/Assets/Plugins/Pixel Crushers/Dialogue System/Demo/Scenes/DemoScene1.unity.meta
 guid: 955abf6400389cf4f8e68ac194db83e0
 timeCreated: 1525354080
+========
+guid: 8a0c9218a650547d98138cd835033977
+folderAsset: yes
+timeCreated: 1484670163
+>>>>>>>> d75320d493137247596535246e9f688dde0775ee:Project Context 2/New Unity Project/Library/PackageCache/com.unity.timeline@1.6.4/Samples~/GameplaySequenceDemo/Info/Icons.meta
 licenseType: Store
 DefaultImporter:
   userData: 
