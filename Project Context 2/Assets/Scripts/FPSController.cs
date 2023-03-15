@@ -31,20 +31,13 @@ public class FPSController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         _anim = GetComponent<Animator>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        // Lock and hide the cursor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        if (Input.GetKey(KeyCode.L))  // check if sprinting key is pressed
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal"); // Add this line
 

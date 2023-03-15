@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 641a501636ec3644993211c008d9a8a4, type: 3}
-  m_Name: bugKilling
+  m_Name: bugExterminating
   m_EditorClassIdentifier: 
   m_isInstance: 0
   m_originalAsset: {fileID: 0}
   m_fileVersion: 1
   m_id:
-    m_text: Quest-28382
+    m_text: bugExterminating
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_title:
-    m_text: Quest -28382
+    m_text: Bug Exterminating
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0

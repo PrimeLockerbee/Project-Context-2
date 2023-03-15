@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
     public GameObject minimap;
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (menu.activeSelf.Equals(false))
             {
