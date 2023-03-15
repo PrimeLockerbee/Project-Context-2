@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_description: 
   m_questAssets:
-  - {fileID: 11400000, guid: 36d17dbf487845d45b7521f1e4e88207, type: 2}
   - {fileID: 11400000, guid: e94ed08311150a4438b9a3215e801dde, type: 2}
   - {fileID: 11400000, guid: ca4cec00e549c0c45ada7d9014873b5b, type: 2}
+  - {fileID: 11400000, guid: a1334bd81e8fe0a459c3a289f4d498de, type: 2}
+  - {fileID: 11400000, guid: 77b6ee61be3d293479ad4a24b3e9acb2, type: 2}
+  - {fileID: 11400000, guid: aa425b0a168c70b46a4c03f27700aec4, type: 2}
+  - {fileID: 11400000, guid: f135bc2d4cfa2c3448135533dacf1e77, type: 2}
+  - {fileID: 11400000, guid: 82d0d91896c1f724c969ac4b6422c3df, type: 2}
   m_images: []

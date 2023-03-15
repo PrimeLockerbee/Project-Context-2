@@ -39,7 +39,14 @@ public class FPSController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        if (Input.GetKey(KeyCode.L))  // check if sprinting key is pressed
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
         float v = Input.GetAxisRaw("Vertical");
+        float h = Input.GetAxisRaw("Horizontal"); // Add this line
 
         // Rotate the character using mouse position
         float mouseX = Input.GetAxis("Mouse X");
@@ -47,7 +54,8 @@ public class FPSController : MonoBehaviour
 
         // Move the character forward and backward using W and S keys
         Vector3 forward = transform.forward * v * walkingSpeed;
-        characterController.SimpleMove(forward);
+        Vector3 right = transform.right * h * walkingSpeed; // Add this line
+        characterController.SimpleMove(forward + right); // Add right vector
 
         if (Input.GetKey(KeyCode.LeftShift))  // check if sprinting key is pressed
         {
