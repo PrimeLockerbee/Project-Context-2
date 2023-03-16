@@ -38,6 +38,12 @@ public class FPSController : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKey(KeyCode.L))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal"); // Add this line
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1748621763259534831}
   - component: {fileID: 3296346639269942424}
   - component: {fileID: 5944117230563711066}
+  - component: {fileID: 6804319745820091045}
   m_Layer: 0
   m_Name: TreeStump
   m_TagString: Untagged
@@ -126,6 +127,22 @@ CapsuleCollider:
   m_Height: 4.44
   m_Direction: 1
   m_Center: {x: 0, y: -0.63, z: 0}
+--- !u!208 &6804319745820091045
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495437990644216630}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.138, y: 0.79800004, z: 2.138}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.79800004, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5792799631672333358
 GameObject:
   m_ObjectHideFlags: 0

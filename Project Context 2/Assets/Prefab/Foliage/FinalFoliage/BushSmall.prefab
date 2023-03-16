@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3952032703426118920}
   - component: {fileID: 7069387002459947845}
   - component: {fileID: 6443295889362645259}
+  - component: {fileID: 4486239811430001015}
   m_Layer: 0
   m_Name: BushSmall
   m_TagString: Untagged
@@ -111,6 +112,22 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!208 &4486239811430001015
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941398659525645742}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.26000002, y: 0.158, z: 0.29000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.004, y: 0.147, z: 0.051000003}
+  m_TimeToStationary: 0.5
 --- !u!1 &7204072513858296496
 GameObject:
   m_ObjectHideFlags: 0
