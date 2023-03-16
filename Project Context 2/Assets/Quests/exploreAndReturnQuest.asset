@@ -476,7 +476,7 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
-  m_icon: {fileID: 21300000, guid: a2b55821b501fdc4794faa9bbffedf6d, type: 3}
+  m_icon: {fileID: 0}
   m_group:
     m_text: 
     m_stringAsset: {fileID: 0}
@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: We would like you to explroe the island.
+    m_text: We would like you to explore the island.
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
