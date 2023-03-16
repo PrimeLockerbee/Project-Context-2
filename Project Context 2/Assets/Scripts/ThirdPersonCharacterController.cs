@@ -32,6 +32,10 @@ public class ThirdPersonCharacterController : MonoBehaviour
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
+    private Vector3 direction = Vector3.zero;
+    private Quaternion targetRotation;
+    private float rotationSpeed = 10.0f;
+
     private Animator _anim;
 
     void Awake()
@@ -64,14 +68,36 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 DropObject();
             }
         }
+
+        if (h == 0 && v == 0)
+        {
+            _anim.SetBool("Walk", false);
+        }
+        else
+        {
+            _anim.SetBool("Walk", true);
+        }
     }
 
     void Move(float h, float v)
     {
-        movement.Set(h, 0f, v);
-        movement = movement.normalized * speed * Time.deltaTime;
+        direction = new Vector3(h, 0, v);
 
-        transform.Translate(movement, Space.World);
+        if (direction.magnitude > 0.1f)
+        {
+            targetRotation = Quaternion.LookRotation(direction);
+        }
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+
+        //Rigidbody based movement
+        movement = new Vector3(h, 0f, v);
+        playerRigidbody.AddForce(movement * speed);
+
+        ////Transform.translate based movement
+        //movement.Set(h, 0f, v);
+        //movement = movement.normalized * speed * Time.deltaTime;
+        //transform.Translate(movement, Space.World);
     }
 
     void Sprint()
@@ -79,10 +105,14 @@ public class ThirdPersonCharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed = sprintSpeed;
+            _anim.SetBool("Sprint", true);
+            _anim.SetBool("Walk", false);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             speed = startSpeed;
+            _anim.SetBool("Sprint", false);
+            _anim.SetBool("Walk", true);
         }
     }
 
@@ -118,50 +148,8 @@ public class ThirdPersonCharacterController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(pickupRaycastStart.position, pickupRaycastStart.forward, out hit, pickupRaycastDistance))
         {
-            if (hit.transform.CompareTag("Pickup"))
-            {
-                pickedUpObject = hit.transform.gameObject;
+            Debug.Log(hit.transform.gameObject.name);
 
-                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
-                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
-                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
-                pickedUpObject.transform.parent = transform;
-                isHoldingObject = true;
-            }
-        }
-        if (Physics.Raycast(transform.position, -transform.forward, out hit, pickUpRange))
-        {
-            if (hit.transform.CompareTag("Pickup"))
-            {
-                pickedUpObject = hit.transform.gameObject;
-
-                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
-                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
-                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
-                pickedUpObject.transform.parent = transform;
-                isHoldingObject = true;
-            }
-        }
-
-        if (Physics.Raycast(transform.position, transform.right, out hit, pickUpRange))
-        {
-            if (hit.transform.CompareTag("Pickup"))
-            {
-                pickedUpObject = hit.transform.gameObject;
-
-                pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
-                pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
-                pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
-                pickedUpObject.transform.parent = transform;
-                isHoldingObject = true;
-            }
-        }
-
-        if (Physics.Raycast(transform.position, -transform.right, out hit, pickUpRange))
-        {
             if (hit.transform.CompareTag("Pickup"))
             {
                 pickedUpObject = hit.transform.gameObject;
