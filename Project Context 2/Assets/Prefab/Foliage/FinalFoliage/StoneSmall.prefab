@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3881133118417477418}
   - component: {fileID: 8257164375476310750}
   - component: {fileID: 1937120760805097709}
+  - component: {fileID: -5670681922042538476}
   m_Layer: 0
   m_Name: StoneSmall
   m_TagString: Untagged
@@ -111,6 +112,22 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!208 &-5670681922042538476
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3652470001748803288}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.509, y: 0.095000006, z: 0.38000003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.095000006, z: -0.003}
+  m_TimeToStationary: 0.5
 --- !u!1 &8274162783180584429
 GameObject:
   m_ObjectHideFlags: 0

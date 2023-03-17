@@ -9,6 +9,7 @@ TagManager:
   - Pickup
   - VFX
   - House
+  - Enemy
   layers:
   - Default
   - TransparentFX

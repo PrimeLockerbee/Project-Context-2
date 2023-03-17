@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.QuestMachine;
 
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
@@ -91,11 +92,7 @@ public class FPSController : MonoBehaviour
             {
                 if (hitCollider.CompareTag("Enemy"))
                 {
-                    //Enemy enemy = hitCollider.GetComponent<Enemy>();
-                    //if (enemy != null)
-                    //{
-                        //enemy.TakeDamage(smashDamage);
-                    //}
+                    Destroy(hitCollider.gameObject);     
                 }
             }
             moveDirection.y -= smashDropHeight;
