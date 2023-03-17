@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7016942518206168340}
   - component: {fileID: 2236671859990269622}
   - component: {fileID: 6415431652341101958}
+  - component: {fileID: 1734520724812066595}
   m_Layer: 0
   m_Name: StoneBig
   m_TagString: Untagged
@@ -194,3 +195,19 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!208 &1734520724812066595
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858038299295708799}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.65400004, y: 0.11000001, z: 0.65400004}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.11000001, z: 0}
+  m_TimeToStationary: 0.5

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8652521570519110101}
   - component: {fileID: 2669441033329755414}
   - component: {fileID: 6250247843027395395}
+  - component: {fileID: 4179850648058785984}
   m_Layer: 0
   m_Name: BushMedium
   m_TagString: Untagged
@@ -194,3 +195,19 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!208 &4179850648058785984
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310152756273125627}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.36800003, y: 0.257, z: 0.4}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.033, y: 0.24300002, z: 0.044000003}
+  m_TimeToStationary: 0.5

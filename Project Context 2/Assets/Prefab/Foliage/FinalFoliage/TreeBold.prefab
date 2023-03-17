@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8815133417455406613}
   - component: {fileID: 5851277990266365342}
   - component: {fileID: 8117911816032064438}
+  - component: {fileID: -7858507886160249354}
   m_Layer: 0
   m_Name: TreeBold
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5240425149100555856}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -126,6 +127,22 @@ CapsuleCollider:
   m_Height: 8.48
   m_Direction: 1
   m_Center: {x: 0, y: 2.2876554, z: 0}
+--- !u!208 &-7858507886160249354
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240425149100555856}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.138, y: 2.288, z: 2.138}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.288, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6107331003941013071
 GameObject:
   m_ObjectHideFlags: 0
