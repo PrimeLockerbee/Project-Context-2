@@ -6590,8 +6590,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  endcam: {fileID: 0}
-  minimap: {fileID: 0}
+  endcam: {fileID: 1285767775}
+  minimap: {fileID: 218598064}
 --- !u!4 &1109571751
 Transform:
   m_ObjectHideFlags: 0
@@ -7993,7 +7993,7 @@ GameObject:
   - component: {fileID: 1285767777}
   - component: {fileID: 1285767776}
   m_Layer: 0
-  m_Name: Island overview cam
+  m_Name: EndingCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
