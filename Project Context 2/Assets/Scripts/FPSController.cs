@@ -17,7 +17,7 @@ public class FPSController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
-    private Animator _anim;
+    public Animator _anim;
 
     private bool isHoldingObject = false;
     private GameObject pickedUpObject;
@@ -31,7 +31,6 @@ public class FPSController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        _anim = GetComponent<Animator>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
