@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1053015858}
-  m_IndirectSpecularColor: {r: 0.6052487, g: 0.63300264, b: 0.6271402, a: 1}
+  m_IndirectSpecularColor: {r: 0.60162306, g: 0.6152527, b: 0.6192786, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1206,6 +1206,7 @@ GameObject:
   - component: {fileID: 43927245}
   - component: {fileID: 43927244}
   - component: {fileID: 43927247}
+  - component: {fileID: 43927249}
   - component: {fileID: 43927248}
   m_Layer: 0
   m_Name: Water
@@ -1291,8 +1292,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.6078393, z: 10}
-  m_Center: {x: 0, y: -0.34888, z: 0}
+  m_Size: {x: 10, y: 0.63886756, z: 10}
+  m_Center: {x: 0, y: -0.33336574, z: 0}
 --- !u!114 &43927248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,10 +1303,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 43927242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec3a93b5b43cbcf47991f7754efaf3e3, type: 3}
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnposition: {x: -43, y: 4, z: -197}
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 520bb3ab0c0741b4796fb101d257167f, type: 2}
+--- !u!114 &43927249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43927242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!1001 &56985878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5090,15 +5109,19 @@ MonoBehaviour:
     _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"GameManager","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Water","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Terrein","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TerrainDataLessTrees","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.TerrainData,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Less","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.TerrainData,
       UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TerreinData","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.TerrainData,
-      UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Sparkles","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Fires","value":{"$content":6,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 2090506917}
     - {fileID: 43927242}
     - {fileID: 570310886}
-    - {fileID: 15600000, guid: a58a1664042bfc247a7940332f631182, type: 2}
     - {fileID: 15600000, guid: d5f1fd6f258f5724ebdead4f7b2da4ee, type: 2}
+    - {fileID: 15600000, guid: a58a1664042bfc247a7940332f631182, type: 2}
+    - {fileID: 1124439026}
+    - {fileID: 704059790}
 --- !u!4 &258400647
 Transform:
   m_ObjectHideFlags: 0
@@ -7689,7 +7712,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 379094949}
   m_LocalRotation: {x: -0, y: 0.65046626, z: -0, w: 0.7595352}
-  m_LocalPosition: {x: -65.9, y: -5.161025, z: 203.3}
+  m_LocalPosition: {x: -64.19, y: -5.161025, z: 192.33}
   m_LocalScale: {x: 0.35654226, y: 0.56046, z: 1.8297546}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10938,7 +10961,7 @@ TerrainCollider:
   m_GameObject: {fileID: 570310886}
   m_Material: {fileID: 0}
   m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: d5f1fd6f258f5724ebdead4f7b2da4ee, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: a58a1664042bfc247a7940332f631182, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &570310888
 Terrain:
@@ -10949,7 +10972,7 @@ Terrain:
   m_GameObject: {fileID: 570310886}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: d5f1fd6f258f5724ebdead4f7b2da4ee, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: a58a1664042bfc247a7940332f631182, type: 2}
   m_TreeDistance: 3645
   m_TreeBillboardDistance: 830
   m_TreeCrossFadeLength: 133
@@ -13201,6 +13224,11 @@ Transform:
   m_Father: {fileID: 1599619021}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &704059790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1176927460057654461, guid: 4da05e400a6f0ad489c02399afc5727b, type: 3}
+  m_PrefabInstance: {fileID: 992611814}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &710420138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1320411542853409003, guid: 0233d07fcf3f70c44844ac43cada0cb9, type: 3}
@@ -13893,6 +13921,11 @@ Transform:
   m_Father: {fileID: 592225198}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 86.12, z: 0}
+--- !u!95 &764682594 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8728734179649048053, guid: 01e9c85e47df1c64fa4b31fb7daff95f, type: 3}
+  m_PrefabInstance: {fileID: 8439679569347182497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &768951114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19927,6 +19960,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4068373912626513877, guid: 0f276793cb8cf6342b6bdc895918b781, type: 3}
+--- !u!1 &1124439026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3900226775072667650, guid: ee5674ff37090b04dab7c56d5279de4c, type: 3}
+  m_PrefabInstance: {fileID: 294798296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1129475127
 GameObject:
   m_ObjectHideFlags: 0
@@ -23071,7 +23109,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1285767779}
   - component: {fileID: 1285767778}
-  - component: {fileID: 1285767777}
   - component: {fileID: 1285767776}
   m_Layer: 0
   m_Name: EndingCamera
@@ -23113,14 +23150,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &1285767777
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285767775}
-  m_Enabled: 1
 --- !u!20 &1285767778
 Camera:
   m_ObjectHideFlags: 0
@@ -41047,7 +41076,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e820be54729b9de4885edb3133d512bd, type: 2}
+  - {fileID: 2100000, guid: 13a6012f9d7b2a044b27a4525e05db64, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41133,6 +41162,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 691364758}
     m_Modifications:
+    - target: {fileID: 966541215607870252, guid: d88ed7013e2e2a347ae087b5edf6e7b1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b93fc3a7ebd18b459b8fc27e451fbb0, type: 2}
     - target: {fileID: 3310335497446871984, guid: d88ed7013e2e2a347ae087b5edf6e7b1, type: 3}
       propertyPath: m_Name
       value: CrateSmall
@@ -41452,7 +41485,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e820be54729b9de4885edb3133d512bd, type: 2}
+  - {fileID: 2100000, guid: de761cb7f086ad441a0c9d71c9ca175d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -41630,7 +41663,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e820be54729b9de4885edb3133d512bd, type: 2}
+  - {fileID: 2100000, guid: 239dc988029e48146828c590258454cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42187,7 +42220,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e820be54729b9de4885edb3133d512bd, type: 2}
+  - {fileID: 2100000, guid: e628e8a51a649da4cac7a32d7b649a4f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42553,7 +42586,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e820be54729b9de4885edb3133d512bd, type: 2}
+  - {fileID: 2100000, guid: 454e758a5cfdcde44aa188363d281355, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42631,7 +42664,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e820be54729b9de4885edb3133d512bd, type: 2}
+  - {fileID: 2100000, guid: 52c6b5cda0ae9694880f96d2d5ff953a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42798,7 +42831,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8781643290201300247, guid: 01e9c85e47df1c64fa4b31fb7daff95f, type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 764682594}
+    - target: {fileID: 8781643290201300247, guid: 01e9c85e47df1c64fa4b31fb7daff95f, type: 3}
+      propertyPath: runningSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2188106428300598861, guid: 01e9c85e47df1c64fa4b31fb7daff95f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 01e9c85e47df1c64fa4b31fb7daff95f, type: 3}
 --- !u!4 &8622867062519752587
 Transform:
