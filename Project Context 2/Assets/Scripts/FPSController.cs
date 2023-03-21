@@ -19,7 +19,7 @@ public class FPSController : MonoBehaviour
 
     public Animator _anim;
 
-    private bool isHoldingObject = false;
+    public bool isHoldingObject = false;
     private GameObject pickedUpObject;
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
@@ -144,6 +144,7 @@ public class FPSController : MonoBehaviour
             pickedUpObject.GetComponent<BoxCollider>().enabled = true;
             pickedUpObject.transform.parent = null;
             isHoldingObject = false;
+            pickedUpObject = null;
         }
     }
 }
