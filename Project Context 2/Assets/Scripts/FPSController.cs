@@ -20,7 +20,7 @@ public class FPSController : MonoBehaviour
     public Animator _anim;
 
     public bool isHoldingObject = false;
-    private GameObject pickedUpObject;
+    public GameObject pickedUpObject;
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
@@ -131,7 +131,13 @@ public class FPSController : MonoBehaviour
                 pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
+
+                Debug.Log("Picked up object: " + pickedUpObject.name);
             }
+        }
+        else
+        {
+            Debug.Log("Did not detect any pickup objects.");
         }
     }
 
