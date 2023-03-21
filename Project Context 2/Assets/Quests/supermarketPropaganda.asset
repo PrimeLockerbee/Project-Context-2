@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9135724035091002486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: VillagePropaganda
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0
 --- !u!114 &-9085890079071675191
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18,6 +36,42 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &-8841495322098754268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: TownPropaganda
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 1
+--- !u!114 &-8759025753516558624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: FarmersmarketPropaganda
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 1
 --- !u!114 &-8697882246253058094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -526,6 +580,24 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_headingLevel: 1
+--- !u!114 &-46058786960066774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: BeachPropaganda
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,7 +619,7 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_title:
-    m_text: Supermarket Propaganda
+    m_text: Propaganda Spreading
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -669,8 +741,8 @@ MonoBehaviour:
     m_childIndexList: 08000000
     m_canvasRect:
       serializedVersion: 2
-      x: 201
-      y: 20
+      x: 30
+      y: 48
       width: 120
       height: 48
   - m_id:
@@ -719,8 +791,8 @@ MonoBehaviour:
     m_childIndexList: 02000000
     m_canvasRect:
       serializedVersion: 2
-      x: 156.6557
-      y: 545.6553
+      x: 30
+      y: 552
       width: 120
       height: 48
   - m_id:
@@ -765,8 +837,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 158.24176
-      y: 618.2281
+      x: 30
+      y: 624
       width: 120
       height: 35
   - m_id:
@@ -803,6 +875,7 @@ MonoBehaviour:
         - {fileID: -9085890079071675191}
     - m_actionList:
       - {fileID: 2228952730924399077}
+      - {fileID: -46058786960066774}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -816,8 +889,8 @@ MonoBehaviour:
     m_childIndexList: 04000000
     m_canvasRect:
       serializedVersion: 2
-      x: 107.94351
-      y: 156.28247
+      x: 30
+      y: 192
       width: 120
       height: 48
   - m_id:
@@ -854,6 +927,7 @@ MonoBehaviour:
         - {fileID: -6438143716568535789}
     - m_actionList:
       - {fileID: 4659620522009016191}
+      - {fileID: -8759025753516558624}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -867,8 +941,8 @@ MonoBehaviour:
     m_childIndexList: 05000000
     m_canvasRect:
       serializedVersion: 2
-      x: 198.71988
-      y: 224.82442
+      x: 30
+      y: 264
       width: 120
       height: 48
   - m_id:
@@ -905,6 +979,7 @@ MonoBehaviour:
         - {fileID: -2990367893928264307}
     - m_actionList:
       - {fileID: 7970092181096577339}
+      - {fileID: 7953334384741906450}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -918,8 +993,8 @@ MonoBehaviour:
     m_childIndexList: 06000000
     m_canvasRect:
       serializedVersion: 2
-      x: 201.72165
-      y: 291.13403
+      x: 30
+      y: 335
       width: 120
       height: 48
   - m_id:
@@ -956,6 +1031,7 @@ MonoBehaviour:
         - {fileID: 969527122136616933}
     - m_actionList:
       - {fileID: -4049698401310258102}
+      - {fileID: -8841495322098754268}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -969,8 +1045,8 @@ MonoBehaviour:
     m_childIndexList: 07000000
     m_canvasRect:
       serializedVersion: 2
-      x: 203.78354
-      y: 368.45358
+      x: 29.082573
+      y: 406.16513
       width: 120
       height: 48
   - m_id:
@@ -1007,6 +1083,7 @@ MonoBehaviour:
         - {fileID: 6110195502675711037}
     - m_actionList:
       - {fileID: -8232598613437607415}
+      - {fileID: -9135724035091002486}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -1020,8 +1097,8 @@ MonoBehaviour:
     m_childIndexList: 01000000
     m_canvasRect:
       serializedVersion: 2
-      x: 201.72165
-      y: 449.89688
+      x: 30
+      y: 479
       width: 120
       height: 48
   - m_id:
@@ -1071,8 +1148,8 @@ MonoBehaviour:
     m_childIndexList: 03000000
     m_canvasRect:
       serializedVersion: 2
-      x: 199.61426
-      y: 90.19841
+      x: 30
+      y: 120
       width: 120
       height: 48
   m_goalEntityTypeName: 
@@ -1169,6 +1246,24 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_headingLevel: 1
+--- !u!114 &1671330334908334639
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0
 --- !u!114 &2037761605018797436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1467,6 +1562,24 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &7953334384741906450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: HarborPropaganda
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 1
 --- !u!114 &7970092181096577339
 MonoBehaviour:
   m_ObjectHideFlags: 1
