@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1053015858}
-  m_IndirectSpecularColor: {r: 0.601623, g: 0.6152527, b: 0.6192786, a: 1}
+  m_IndirectSpecularColor: {r: 0.60162306, g: 0.6152527, b: 0.6192786, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -653,6 +653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e934de1a262c41478a844f227d499e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1835787938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7599452025039680554, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
+  m_PrefabInstance: {fileID: 7997289196962696229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &116065738532071255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1882,6 +1887,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4719124555658910868, guid: 8459830e5c12df749baa7e65d7fe82ec, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1835787938}
     - target: {fileID: 5646132055712522474, guid: 8459830e5c12df749baa7e65d7fe82ec, type: 3}
       propertyPath: waterMaterial
       value: 
@@ -2369,6 +2378,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7078952688883117715, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
+      propertyPath: jumpSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7997289196215824577, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
       propertyPath: m_RootOrder
       value: 4

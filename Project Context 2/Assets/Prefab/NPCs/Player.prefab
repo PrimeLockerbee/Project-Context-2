@@ -304,7 +304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2731296029209298895}
+  - {fileID: 402118357330624291}
   - {fileID: 5238094140934460895}
   - {fileID: 8439679569769642669}
   - {fileID: 8439679569490161931}
@@ -383,9 +383,11 @@ MonoBehaviour:
   gravity: 14
   canMove: 1
   _anim: {fileID: 0}
+  isHoldingObject: 0
+  pickedUpObject: {fileID: 0}
   pickupRaycastStart: {fileID: 8439679569769642669}
   pickupRaycastDistance: 5
---- !u!1001 &2480702986302119972
+--- !u!1001 &152601212525975752
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -442,33 +444,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6998a0d0de7a76419c47ff6dcc1527e, type: 3}
---- !u!4 &2731296029209298895 stripped
+--- !u!4 &402118357330624291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d6998a0d0de7a76419c47ff6dcc1527e, type: 3}
-  m_PrefabInstance: {fileID: 2480702986302119972}
+  m_PrefabInstance: {fileID: 152601212525975752}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3363155281524874613 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d6998a0d0de7a76419c47ff6dcc1527e, type: 3}
-  m_PrefabInstance: {fileID: 2480702986302119972}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8728734179649048053
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3363155281524874613}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 245233d113c3eec498827db0a42ade1e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0

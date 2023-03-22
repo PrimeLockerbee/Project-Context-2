@@ -65,19 +65,12 @@ public class FPSController : MonoBehaviour
             walkingSpeed = 5.5f;
         }
 
-        // Play walk animation when moving
-        if (forward != Vector3.zero)
-        {
-            _anim.SetBool("Walk", true);
-        }
-        else
-        {
-            _anim.SetBool("Walk", false);
-        }
+
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
+            _anim.SetTrigger("Jump");
         }
         else
         {
@@ -86,6 +79,7 @@ public class FPSController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
+            _anim.SetTrigger("GroundPound");
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, /*smashRadius*/ 2);
             foreach (Collider hitCollider in hitColliders)
             {
@@ -106,12 +100,16 @@ public class FPSController : MonoBehaviour
             if (!isHoldingObject)
             {
                 PickUpObject();
+                _anim.SetTrigger("Interact");
             }
             else
             {
                 DropObject();
+
             }
         }
+
+        Move();
     }
 
     private void PickUpObject()
@@ -153,4 +151,39 @@ public class FPSController : MonoBehaviour
             pickedUpObject = null;
         }
     }
+
+    private void Move()
+
+    {
+        float moveZ = Input.GetAxis("Vertical");
+
+        moveDirection = new Vector3(0, 0, moveZ);
+
+        if (Input.GetAxisRaw("Vertical") != 0 && walkingSpeed != runningSpeed)
+        {
+            Walk();
+        }
+        else if (walkingSpeed == runningSpeed)
+        {
+            Run();
+        }
+        else if (Input.GetAxisRaw("Vertical") == 0)
+        {
+            Idle();
+        }
+    }
+
+    private void Idle()
+    {
+        _anim.SetFloat("Speed", 0, 0.1f, Time.deltaTime);
+    }
+    private void Walk()
+    {
+        _anim.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+    }
+    private void Run()
+    {
+        _anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
+    }
+
 }
