@@ -240,7 +240,7 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
-  m_icon: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: 19f187bea6c373f4ca4cdc1c0785cbab, type: 3}
   m_group:
     m_text: 
     m_stringAsset: {fileID: 0}

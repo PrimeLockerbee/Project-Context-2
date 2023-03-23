@@ -56,7 +56,7 @@ public class FPSController : MonoBehaviour
         Vector3 right = transform.right * h * walkingSpeed; // Add this line
         characterController.SimpleMove(forward + right); // Add right vector
 
-        if (Input.GetKey(KeyCode.LeftShift))  // check if sprinting key is pressed
+        if (Input.GetKey(KeyCode.LeftShift) && v != 0)  // check if sprinting key is pressed
         {
             walkingSpeed = runningSpeed;  // if so, set movement speed to sprinting speed
         }
