@@ -9,7 +9,7 @@ public class QuestBoard : MonoBehaviour
 
     private void Start()
     {
-        //QuestPanel.SetActive(false);
+        QuestPanel.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)

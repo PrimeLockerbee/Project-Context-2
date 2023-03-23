@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.QuestMachine;
 
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
@@ -13,94 +14,83 @@ public class FPSController : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
 
-    float originalHeight;
-    float crouchHeight = 0.5f;
-    bool isCrouching = false;
-    public float crouchSpeed = 3.0f;
-
     [HideInInspector]
     public bool canMove = true;
 
-    private Animator _anim;
+    public Animator _anim;
 
-    private bool isHoldingObject = false;
-    private GameObject pickedUpObject;
+    public bool isHoldingObject = false;
+    public GameObject pickedUpObject;
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
-    private Vector3 direction = Vector3.zero;
-    private Quaternion targetRotation;
-    private float rotationSpeed = 10.0f;
+    private float rotationSpeed = 100.0f;
+
+    private int smashDropHeight = 500;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
 
-        //// Lock cursor
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
-
-        // Save the original height of the character controller
-        originalHeight = characterController.height;
-
-        _anim = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        // We are grounded, so recalculate move direction based on axes
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-        // Press Left Shift to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        bool isCrouchKeyPressed = Input.GetKey(KeyCode.C);
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
-        float movementDirectionY = moveDirection.y;
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
-        if (isCrouchKeyPressed && !isCrouching)
+        if(Input.GetKey(KeyCode.L))
         {
-            // Crouch
-            isCrouching = true;
-            characterController.height = crouchHeight;
-            curSpeedX = crouchSpeed * Input.GetAxis("Vertical");
-            curSpeedY = crouchSpeed * Input.GetAxis("Horizontal");
-        }
-        else if (!isCrouchKeyPressed && isCrouching)
-        {
-            // Stand up
-            isCrouching = false;
-            characterController.height = originalHeight;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
+        float v = Input.GetAxisRaw("Vertical");
+        float h = Input.GetAxisRaw("Horizontal"); // Add this line
 
-        if (curSpeedX == 0 && curSpeedY == 0)
+        // Rotate the character using mouse position
+        float mouseX = Input.GetAxis("Mouse X");
+        transform.Rotate(0, mouseX * rotationSpeed * Time.deltaTime, 0);
+
+        // Move the character forward and backward using W and S keys
+        Vector3 forward = transform.forward * v * walkingSpeed;
+        Vector3 right = transform.right * h * walkingSpeed; // Add this line
+        characterController.SimpleMove(forward + right); // Add right vector
+
+        if (Input.GetKey(KeyCode.LeftShift))  // check if sprinting key is pressed
         {
-            _anim.SetBool("Walk", false);
+            walkingSpeed = runningSpeed;  // if so, set movement speed to sprinting speed
         }
         else
         {
-            _anim.SetBool("Walk", true);
-            transform.rotation = Quaternion.LookRotation(moveDirection);
+            walkingSpeed = 5.5f;
         }
+
+
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
+            _anim.SetTrigger("Jump");
         }
         else
         {
-            moveDirection.y = movementDirectionY;
-        }
-
-        // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
-        // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
-        // as an acceleration (ms^-2)
-        if (!characterController.isGrounded)
-        {
             moveDirection.y -= gravity * Time.deltaTime;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            _anim.SetTrigger("GroundPound");
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, /*smashRadius*/ 2);
+            foreach (Collider hitCollider in hitColliders)
+            {
+                if (hitCollider.CompareTag("Enemy"))
+                {
+                    Destroy(hitCollider.gameObject);     
+                }
+            }
+            moveDirection.y -= smashDropHeight;
+        }
+
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
@@ -110,12 +100,16 @@ public class FPSController : MonoBehaviour
             if (!isHoldingObject)
             {
                 PickUpObject();
+                _anim.SetTrigger("Interact");
             }
             else
             {
                 DropObject();
+
             }
         }
+
+        Move();
     }
 
     private void PickUpObject()
@@ -135,7 +129,13 @@ public class FPSController : MonoBehaviour
                 pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
+
+                Debug.Log("Picked up object: " + pickedUpObject.name);
             }
+        }
+        else
+        {
+            Debug.Log("Did not detect any pickup objects.");
         }
     }
 
@@ -148,6 +148,42 @@ public class FPSController : MonoBehaviour
             pickedUpObject.GetComponent<BoxCollider>().enabled = true;
             pickedUpObject.transform.parent = null;
             isHoldingObject = false;
+            pickedUpObject = null;
         }
     }
+
+    private void Move()
+
+    {
+        float moveZ = Input.GetAxis("Vertical");
+
+        moveDirection = new Vector3(0, 0, moveZ);
+
+        if (Input.GetAxisRaw("Vertical") != 0 && walkingSpeed != runningSpeed)
+        {
+            Walk();
+        }
+        else if (walkingSpeed == runningSpeed)
+        {
+            Run();
+        }
+        else if (Input.GetAxisRaw("Vertical") == 0)
+        {
+            Idle();
+        }
+    }
+
+    private void Idle()
+    {
+        _anim.SetFloat("Speed", 0, 0.1f, Time.deltaTime);
+    }
+    private void Walk()
+    {
+        _anim.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+    }
+    private void Run()
+    {
+        _anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
+    }
+
 }

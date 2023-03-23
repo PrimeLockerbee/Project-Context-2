@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8538778867750768431
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: InterActible2
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0
 --- !u!114 &-8509970894499485773
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -50,7 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: You retrieved three apples.
+    m_text: You retrieved seven apples.
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -86,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: Could you pick three apples for me please!
+    m_text: Could you pick seven apples for me please!
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -103,7 +121,7 @@ MonoBehaviour:
   m_Name: ActivateGameObjectQuestAction
   m_EditorClassIdentifier: 
   m_gameObjectName:
-    m_text: AppleParent
+    m_text: Apples
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -164,12 +182,12 @@ MonoBehaviour:
   m_originalAsset: {fileID: 0}
   m_fileVersion: 1
   m_id:
-    m_text: RetrieveApples
+    m_text: retrieveApples
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_title:
-    m_text: RetrieveApples
+    m_text: Apple Picker
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -211,13 +229,15 @@ MonoBehaviour:
   m_saveAllIfWaitingToStart: 0
   m_state: 0
   m_stateInfoList:
-  - m_actionList: []
+  - m_actionList:
+    - {fileID: 5541276692472473035}
     m_categorizedContentList:
     - m_contentList: []
     - m_contentList: []
     - m_contentList: []
   - m_actionList:
     - {fileID: -4909975231858833184}
+    - {fileID: 5377151441687385696}
     m_categorizedContentList:
     - m_contentList:
       - {fileID: 6906730175830988468}
@@ -226,7 +246,7 @@ MonoBehaviour:
     - m_contentList:
       - {fileID: -2805030081561492529}
   - m_actionList:
-    - {fileID: 3271366347633710987}
+    - {fileID: 2012265578938107109}
     m_categorizedContentList:
     - m_contentList: []
     - m_contentList:
@@ -257,7 +277,7 @@ MonoBehaviour:
     m_currentValue: 0
     m_randomizeInitialValue: 0
     m_minValue: 0
-    m_maxValue: 3
+    m_maxValue: 7
     m_updateMode: 1
     m_messageEventList:
     - m_senderSpecifier: 0
@@ -327,7 +347,7 @@ MonoBehaviour:
     m_childIndexList: 01000000
     m_canvasRect:
       serializedVersion: 2
-      x: 120
+      x: 117
       y: 64
       width: 120
       height: 48
@@ -351,7 +371,10 @@ MonoBehaviour:
       m_textTableFieldID: 0
     m_stateInfoList:
     - m_actionList: []
-      m_categorizedContentList: []
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList: []
+      - m_contentList: []
     - m_actionList:
       - {fileID: -5889508761439754563}
       m_categorizedContentList:
@@ -399,8 +422,14 @@ MonoBehaviour:
       m_textTableFieldID: 0
     m_stateInfoList:
     - m_actionList: []
-      m_categorizedContentList: []
-    - m_actionList: []
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList: []
+      - m_contentList: []
+    - m_actionList:
+      - {fileID: 154246426644147724}
+      - {fileID: -8538778867750768431}
+      - {fileID: 8517421569292747594}
       m_categorizedContentList:
       - m_contentList:
         - {fileID: 7702366133087718068}
@@ -446,9 +475,15 @@ MonoBehaviour:
       m_textTableFieldID: 0
     m_stateInfoList:
     - m_actionList: []
-      m_categorizedContentList: []
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList: []
+      - m_contentList: []
     - m_actionList: []
-      m_categorizedContentList: []
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList: []
+      - m_contentList: []
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
@@ -463,11 +498,29 @@ MonoBehaviour:
     m_canvasRect:
       serializedVersion: 2
       x: 132
-      y: 311
+      y: 314.79745
       width: 120
       height: 35
   m_goalEntityTypeName: 
   m_nextContentID: 0
+--- !u!114 &154246426644147724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: InterActible1
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0
 --- !u!114 &198607409467239851
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -506,7 +559,7 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
---- !u!114 &3271366347633710987
+--- !u!114 &2012265578938107109
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -563,7 +616,7 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_parameter:
-    m_text: RetrieveApples
+    m_text: retrieveApples
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -591,6 +644,24 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_headingLevel: 1
+--- !u!114 &5377151441687385696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: '*TEMP QUEST BOARD SUPERMARKET*'
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0
 --- !u!114 &5520431634358401606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -609,6 +680,33 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &5541276692472473035
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9840a28297a53d449903f34dc60157bb, type: 3}
+  m_Name: UnityEventQuestAction
+  m_EditorClassIdentifier: 
+  m_onExecute:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6583066565880557597
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -683,3 +781,21 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &8517421569292747594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
+  m_Name: ActivateGameObjectQuestAction
+  m_EditorClassIdentifier: 
+  m_gameObjectName:
+    m_text: InterActible3
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0

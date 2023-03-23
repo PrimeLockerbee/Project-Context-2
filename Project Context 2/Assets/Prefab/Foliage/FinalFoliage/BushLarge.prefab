@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3731043955351251558}
   - component: {fileID: 8236458953548011847}
   - component: {fileID: 8881903372193379937}
+  - component: {fileID: 2508490273659786305}
   m_Layer: 0
   m_Name: BushLarge
   m_TagString: Untagged
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8d70fadbff33b941965bd73f70d5be7, type: 2}
+  - {fileID: 2100000, guid: 8791f0bd21808e14bbb701900bd0f94e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,6 +112,22 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!208 &2508490273659786305
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123417563810713156}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.549, y: 0.34500003, z: 0.72700006}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.068, y: 0.326, z: 0.020000001}
+  m_TimeToStationary: 0.5
 --- !u!1 &6498661034767984393
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8d70fadbff33b941965bd73f70d5be7, type: 2}
+  - {fileID: 2100000, guid: 8791f0bd21808e14bbb701900bd0f94e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

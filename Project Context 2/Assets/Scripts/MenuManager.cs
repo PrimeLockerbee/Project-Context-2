@@ -5,33 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject menu;
-    public GameObject endcam;
-    public GameObject minimap;
+    [SerializeField] GameObject _miniMap;
+    [SerializeField] GameObject _endCam;
+    [SerializeField] GameObject _menu;
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (menu.activeSelf.Equals(false))
+            if (_menu.activeSelf.Equals(false))
             {
-                menu.SetActive(true);
-                minimap.SetActive(false);
+                _menu.SetActive(true);
+                _miniMap.SetActive(false);
             }
             else
             {
-                menu.SetActive(false);
-                minimap.SetActive(true);
-                endcam.SetActive(false);
+                _menu.SetActive(false);
+                _miniMap.SetActive(true);
+                _endCam.SetActive(false);
             }
-            
         }
     }
-    /*
+
     public void SceneLoader(int num)
     {
         SceneManager.LoadScene(num);
     }
-    */
+
     public void Quit()
     {
         Application.Quit();
