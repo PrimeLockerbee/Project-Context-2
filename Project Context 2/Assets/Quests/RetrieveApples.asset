@@ -54,6 +54,26 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &-6915476949108936362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: As you continue your journey on the island, you come across a farmer
+      working in an orchard. The farmer looks exhausted and is struggling to keep
+      up with the task at hand.
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
 --- !u!114 &-5997415839542860908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,7 +88,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: You retrieved seven apples.
+    m_text: "It\u2019s a success, you have helped the farmer a great deal with their
+      harvest."
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -318,6 +339,7 @@ MonoBehaviour:
       - {fileID: 6906730175830988468}
     - m_contentList:
       - {fileID: 198607409467239851}
+      - {fileID: -6915476949108936362}
     - m_contentList:
       - {fileID: -2805030081561492529}
   - m_actionList:
@@ -565,7 +587,8 @@ MonoBehaviour:
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
-      - m_contentList: []
+      - m_contentList:
+        - {fileID: 9196551278942074236}
       - m_contentList: []
     m_conditionSet:
       m_conditionList: []
@@ -575,7 +598,7 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 132
+      x: 133.31578
       y: 314.79745
       width: 120
       height: 35
@@ -875,3 +898,22 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_state: 0
+--- !u!114 &9196551278942074236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: "Keep up the good work. Your act of kindness isn\u2019t going unnoticed.
+      \r\n"
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0

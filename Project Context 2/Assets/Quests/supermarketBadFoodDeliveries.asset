@@ -477,6 +477,7 @@ MonoBehaviour:
       - {fileID: 1279890038788377265}
     - m_contentList:
       - {fileID: -270862980699714043}
+      - {fileID: 219467142429492143}
     - m_contentList:
       - {fileID: -2876050655099839794}
   - m_actionList:
@@ -531,7 +532,8 @@ MonoBehaviour:
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
-      - m_contentList: []
+      - m_contentList:
+        - {fileID: 7355404675567574655}
       - m_contentList: []
     - m_actionList: []
       m_categorizedContentList:
@@ -546,8 +548,8 @@ MonoBehaviour:
     m_childIndexList: 03000000
     m_canvasRect:
       serializedVersion: 2
-      x: 136.70888
-      y: 26.329117
+      x: 135.70888
+      y: 32.329117
       width: 120
       height: 48
   - m_id:
@@ -696,8 +698,8 @@ MonoBehaviour:
     m_childIndexList: 04000000
     m_canvasRect:
       serializedVersion: 2
-      x: 126.73418
-      y: 116.77214
+      x: 128.73418
+      y: 115.77214
       width: 120
       height: 48
   - m_id:
@@ -825,6 +827,25 @@ MonoBehaviour:
   m_contentListSerializationProxy:
   - t: Body
     s: Return to the supermarket.
+--- !u!114 &219467142429492143
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: Helping out on the island the best you can you decided to help the supermarket
+      refill their stock by bringing them the shipment of boxes of food.
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
 --- !u!114 &1279890038788377265
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1148,6 +1169,24 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_state: 1
+--- !u!114 &7355404675567574655
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: ' At the supermarket you see a worker unloading a shipment of boxes'
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
 --- !u!114 &7637689715682267589
 MonoBehaviour:
   m_ObjectHideFlags: 1
