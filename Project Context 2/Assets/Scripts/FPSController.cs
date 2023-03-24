@@ -55,10 +55,7 @@ public class FPSController : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         transform.Rotate(0, mouseX * rotationSpeed * Time.deltaTime, 0);
 
-        // Move the character forward and backward using W and S keys
-        Vector3 forward = transform.forward * v * walkingSpeed;
-        Vector3 right = transform.right * h * walkingSpeed; // Add this line
-        characterController.SimpleMove(forward + right); // Add right vector
+
 
         if (Input.GetKey(KeyCode.LeftShift) && v != 0)  // check if sprinting key is pressed
         {
@@ -68,9 +65,12 @@ public class FPSController : MonoBehaviour
         {
             walkingSpeed = walkingspeedreturn;
         }
+        // Move the character forward and backward using W and S keys
+        Vector3 forward = transform.forward * v * walkingSpeed;
+        Vector3 right = transform.right * h * walkingSpeed; // Add this line
+        characterController.SimpleMove(forward + right); // Add right vector
 
-
-
+        /*
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
@@ -80,10 +80,13 @@ public class FPSController : MonoBehaviour
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
+        */
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+
+        if (Input.GetButtonDown("Jump"))
         {
             _anim.SetTrigger("GroundPound");
+            
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, /*smashRadius*/ 2);
             foreach (Collider hitCollider in hitColliders)
             {
