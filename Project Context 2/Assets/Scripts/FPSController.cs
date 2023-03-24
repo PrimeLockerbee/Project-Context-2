@@ -10,6 +10,7 @@ public class FPSController : MonoBehaviour
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+    private float walkingspeedreturn;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -28,7 +29,7 @@ public class FPSController : MonoBehaviour
 
     private int smashDropHeight = 500;
 
-    private float walkingspeedreturn;
+    
 
     void Start()
     {

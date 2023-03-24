@@ -2030,6 +2030,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1835787938}
+    - target: {fileID: 4719405373902040190, guid: 8459830e5c12df749baa7e65d7fe82ec, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5646132055712522474, guid: 8459830e5c12df749baa7e65d7fe82ec, type: 3}
       propertyPath: waterMaterial
       value: 
@@ -2939,7 +2943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7078952688883117715, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
       propertyPath: walkingSpeed
-      value: 3
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 7997289196215824577, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
       propertyPath: m_RootOrder
