@@ -10,6 +10,7 @@ public class FPSController : MonoBehaviour
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+    private float walkingspeedreturn;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -17,10 +18,10 @@ public class FPSController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
-    private Animator _anim;
+    public Animator _anim;
 
-    private bool isHoldingObject = false;
-    private GameObject pickedUpObject;
+    public bool isHoldingObject = false;
+    public GameObject pickedUpObject;
     public Transform pickupRaycastStart;
     public float pickupRaycastDistance = 5f;
 
@@ -28,13 +29,15 @@ public class FPSController : MonoBehaviour
 
     private int smashDropHeight = 500;
 
+    
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        _anim = GetComponent<Animator>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        walkingspeedreturn = walkingSpeed;
     }
 
     void Update()
@@ -52,41 +55,38 @@ public class FPSController : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         transform.Rotate(0, mouseX * rotationSpeed * Time.deltaTime, 0);
 
-        // Move the character forward and backward using W and S keys
-        Vector3 forward = transform.forward * v * walkingSpeed;
-        Vector3 right = transform.right * h * walkingSpeed; // Add this line
-        characterController.SimpleMove(forward + right); // Add right vector
 
-        if (Input.GetKey(KeyCode.LeftShift))  // check if sprinting key is pressed
+
+        if (Input.GetKey(KeyCode.LeftShift) && v != 0)  // check if sprinting key is pressed
         {
             walkingSpeed = runningSpeed;  // if so, set movement speed to sprinting speed
         }
         else
         {
-            walkingSpeed = 5.5f;
+            walkingSpeed = walkingspeedreturn;
         }
+        // Move the character forward and backward using W and S keys
+        Vector3 forward = transform.forward * v * walkingSpeed;
+        Vector3 right = transform.right * h * walkingSpeed; // Add this line
+        characterController.SimpleMove(forward + right); // Add right vector
 
-        // Play walk animation when moving
-        if (forward != Vector3.zero)
-        {
-            _anim.SetBool("Walk", true);
-        }
-        else
-        {
-            _anim.SetBool("Walk", false);
-        }
-
+        /*
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
+            _anim.SetTrigger("Jump");
         }
         else
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
+        */
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+
+        if (Input.GetButtonDown("Jump"))
         {
+            _anim.SetTrigger("GroundPound");
+            
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, /*smashRadius*/ 2);
             foreach (Collider hitCollider in hitColliders)
             {
@@ -107,12 +107,16 @@ public class FPSController : MonoBehaviour
             if (!isHoldingObject)
             {
                 PickUpObject();
+                _anim.SetTrigger("Interact");
             }
             else
             {
                 DropObject();
+
             }
         }
+
+        Move();
     }
 
     private void PickUpObject()
@@ -132,7 +136,13 @@ public class FPSController : MonoBehaviour
                 pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
+
+                Debug.Log("Picked up object: " + pickedUpObject.name);
             }
+        }
+        else
+        {
+            Debug.Log("Did not detect any pickup objects.");
         }
     }
 
@@ -145,6 +155,42 @@ public class FPSController : MonoBehaviour
             pickedUpObject.GetComponent<BoxCollider>().enabled = true;
             pickedUpObject.transform.parent = null;
             isHoldingObject = false;
+            pickedUpObject = null;
         }
     }
+
+    private void Move()
+
+    {
+        float moveZ = Input.GetAxis("Vertical");
+
+        moveDirection = new Vector3(0, 0, moveZ);
+
+        if (Input.GetAxisRaw("Vertical") != 0 && walkingSpeed != runningSpeed)
+        {
+            Walk();
+        }
+        else if (walkingSpeed == runningSpeed)
+        {
+            Run();
+        }
+        else if (Input.GetAxisRaw("Vertical") == 0)
+        {
+            Idle();
+        }
+    }
+
+    private void Idle()
+    {
+        _anim.SetFloat("Speed", 0, 0.1f, Time.deltaTime);
+    }
+    private void Walk()
+    {
+        _anim.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+    }
+    private void Run()
+    {
+        _anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
+    }
+
 }
