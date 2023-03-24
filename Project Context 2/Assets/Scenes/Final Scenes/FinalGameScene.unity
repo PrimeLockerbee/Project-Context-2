@@ -107,8 +107,8 @@ NavMeshSettings:
     serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 2
-    agentSlope: 45
+    agentHeight: 1.38
+    agentSlope: 4.1
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: a30de7c47660fd5458e5870d335bc146, type: 2}
 --- !u!1 &43927242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7262186179304094416, guid: f7509fd1161a8fc40873761eb7a2d817, type: 3}
@@ -781,6 +781,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1211482303930376402, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_Height
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1211482303930376402, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_BaseOffset
+      value: -0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 3392368799214676213, guid: 57dac06c896115949922003cfb7f5360, type: 3}
       propertyPath: m_onTriggerEnter.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -901,11 +909,59 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 3392368801157399243, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3392368801180839734, guid: 57dac06c896115949922003cfb7f5360, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3484169007135306562, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169007503929917, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169007950773418, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169008027194259, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169008154438425, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169008295355200, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169008455014463, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169008644430304, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169009002016739, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484169009083735453, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8450032790845717422, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589131402078480255, guid: 57dac06c896115949922003cfb7f5360, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
