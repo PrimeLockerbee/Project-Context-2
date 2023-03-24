@@ -4,23 +4,16 @@ using UnityEngine;
 
 public class IslandStateKeeper : MonoBehaviour
 {
-    [SerializeField] public int i_SouthIslandState = 0;
+    [SerializeField] public int _islandState = 0;
 
-    [SerializeField] public Camera endcam;
-
-
-    [SerializeField] public Renderer waterMaterial;
-    [SerializeField] public Material badMaterial;
-    [SerializeField] public Material goodMaterial;
+    [SerializeField] public GameObject endcam;
 
     [SerializeField] public GameObject GoodEndCanvas;
     [SerializeField] public GameObject BadEndCanvas;
 
-    [SerializeField] public GameObject QuestCanvas;
-
     void Start()
     {
-        i_SouthIslandState = 0;
+        _islandState = 0;
     }
 
     void Update()
@@ -32,15 +25,15 @@ public class IslandStateKeeper : MonoBehaviour
     {
         //endcam.depth = Camera.main.depth + 2;
         
-        if (i_SouthIslandState == -2)
+        if (_islandState == -2)
         {
             //endcam.depth = Camera.main.depth + 2;
             //StartCoroutine(WaitSecondsBad());
 
         }
-        if (i_SouthIslandState == 2)
+        if (_islandState == 2)
         {
-           // endcam.depth = Camera.main.depth + 2;
+            //endcam.depth = Camera.main.depth + 2;
             //StartCoroutine(WaitSecondsGood());
 
         }
@@ -49,10 +42,9 @@ public class IslandStateKeeper : MonoBehaviour
 
     IEnumerator WaitSecondsGood()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
 
-        waterMaterial.GetComponent<Renderer>().material = goodMaterial;
-
+        endcam.SetActive(true);
 
         yield return new WaitForSeconds(6);
 
@@ -61,10 +53,9 @@ public class IslandStateKeeper : MonoBehaviour
 
     IEnumerator WaitSecondsBad()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
 
-        waterMaterial.GetComponent<Renderer>().material = badMaterial;
-
+        endcam.SetActive(true);
 
         yield return new WaitForSeconds(6);
 

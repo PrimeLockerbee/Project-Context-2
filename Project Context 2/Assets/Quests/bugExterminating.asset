@@ -18,6 +18,27 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &-7876245960277459153
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: "As you wander around, you spot the farmer you had helped earlier. As
+      you approach, you see that he\u2019s deep in conversation with another farmer,
+      who seems troubled. The farmer looks up as they notice your presence and beckons
+      you over.\r"
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
 --- !u!114 &-6486746339771002547
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -50,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: You have exterminated all the invasive insects, return to the farmer.
+    m_text: 'Your hard work paid off, the bug plague has been eradicated. '
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -292,6 +313,7 @@ MonoBehaviour:
       - {fileID: 5565876173059050659}
     - m_contentList:
       - {fileID: 5312884862461032467}
+      - {fileID: -7876245960277459153}
     - m_contentList:
       - {fileID: 4259774662492280984}
   - m_actionList:
@@ -446,7 +468,7 @@ MonoBehaviour:
     m_childIndexList: 02000000
     m_canvasRect:
       serializedVersion: 2
-      x: 167.31866
+      x: 168.41756
       y: 377.80215
       width: 120
       height: 48
@@ -543,8 +565,8 @@ MonoBehaviour:
     m_childIndexList: 01000000
     m_canvasRect:
       serializedVersion: 2
-      x: 184
-      y: 168
+      x: 183
+      y: 167
       width: 120
       height: 48
   m_goalEntityTypeName: 
@@ -600,7 +622,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: You have been tasked to kill ten invasive bugs.
+    m_text: 'As you arrive at the farmland you notice that the crops are struggling,
+      with wilting leaves and stunted growth. The soil is teeming with tiny insects
+      and they seem to have multiplied rapidly. '
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
