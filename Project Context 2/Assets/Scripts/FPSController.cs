@@ -28,12 +28,15 @@ public class FPSController : MonoBehaviour
 
     private int smashDropHeight = 500;
 
+    private float walkingspeedreturn;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        walkingspeedreturn = walkingSpeed;
     }
 
     void Update()
@@ -62,7 +65,7 @@ public class FPSController : MonoBehaviour
         }
         else
         {
-            walkingSpeed = 5.5f;
+            walkingSpeed = walkingspeedreturn;
         }
 
 
