@@ -13,7 +13,7 @@ public class FPSController : MonoBehaviour
     private float walkingspeedreturn;
 
     CharacterController characterController;
-    Vector3 moveDirection = Vector3.zero;
+    private Vector3 moveDirection;
 
     [HideInInspector]
     public bool canMove = true;
@@ -58,7 +58,9 @@ public class FPSController : MonoBehaviour
         // Move the character forward and backward using W and S keys
         Vector3 forward = transform.forward * v * walkingSpeed;
         Vector3 right = transform.right * h * walkingSpeed; // Add this line
-        characterController.SimpleMove(forward + right); // Add right vector
+        //characterController.SimpleMove(forward + right); // Add right vector
+
+         moveDirection = (forward + right);
 
         if (Input.GetKey(KeyCode.LeftShift) && v != 0)  // check if sprinting key is pressed
         {
@@ -81,6 +83,7 @@ public class FPSController : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
         }
         */
+        moveDirection.y -= smashDropHeight;
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -98,7 +101,7 @@ public class FPSController : MonoBehaviour
 
 
         // Move the controller
-        characterController.Move(moveDirection * Time.deltaTime);
+        characterController.Move(moveDirection * walkingSpeed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.E))
         {
