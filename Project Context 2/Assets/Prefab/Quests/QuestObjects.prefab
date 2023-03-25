@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Delivery Point Village
+  m_text: 'Delivery Point '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2acb956553c21411f9187a318e6f0285, type: 2}
   m_sharedMaterial: {fileID: -6391363882504980572, guid: 2acb956553c21411f9187a318e6f0285, type: 2}
@@ -3598,7 +3598,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Delivery Point Town
+  m_text: 'Delivery Point '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2acb956553c21411f9187a318e6f0285, type: 2}
   m_sharedMaterial: {fileID: -6391363882504980572, guid: 2acb956553c21411f9187a318e6f0285, type: 2}
@@ -3842,7 +3842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Delivery Point Village
+  m_text: 'Delivery Point '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2acb956553c21411f9187a318e6f0285, type: 2}
   m_sharedMaterial: {fileID: -6391363882504980572, guid: 2acb956553c21411f9187a318e6f0285, type: 2}
@@ -10516,7 +10516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 661673066674350257, guid: 122a206e8ed440644acd88a709adae11, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2244111369819374774, guid: 122a206e8ed440644acd88a709adae11, type: 3}
       propertyPath: m_Name
