@@ -10,7 +10,7 @@ public class FPSController : MonoBehaviour
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
-    private float walkingspeedreturn;
+    public float walkingspeedreturn;
 
     CharacterController characterController;
     private Vector3 moveDirection;
