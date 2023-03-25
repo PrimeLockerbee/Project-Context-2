@@ -11,6 +11,7 @@ public class FPSController : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public float walkingspeedreturn;
+    public Vector3 PickupObjectOffeset;
 
     CharacterController characterController;
     private Vector3 moveDirection;
@@ -134,7 +135,7 @@ public class FPSController : MonoBehaviour
                 pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
                 pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
+                pickedUpObject.transform.position = transform.position + PickupObjectOffeset;
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
 

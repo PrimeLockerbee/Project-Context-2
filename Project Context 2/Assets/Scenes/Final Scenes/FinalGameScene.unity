@@ -1543,6 +1543,54 @@ PrefabInstance:
       propertyPath: m_onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartDialogueWithPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 6186404777132770347, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186404777132770347, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 793322566}
+    - target: {fileID: 6186404777132770347, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendToMessageSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186404777132770347, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PixelCrushers.QuestMachine.QuestControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186404777132770347, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Return:Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 6186404777132770347, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124845470019549552, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onCollisionEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124845470019549552, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onCollisionEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 793322566}
+    - target: {fileID: 7124845470019549552, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onCollisionEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendToMessageSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124845470019549552, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onCollisionEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PixelCrushers.QuestMachine.QuestControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124845470019549552, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onCollisionEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Return:Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124845470019549552, guid: 57dac06c896115949922003cfb7f5360, type: 3}
+      propertyPath: m_onCollisionEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8450032790845717422, guid: 57dac06c896115949922003cfb7f5360, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3332,6 +3380,18 @@ PrefabInstance:
     - target: {fileID: 7078952688883117715, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
       propertyPath: walkingspeedreturn
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078952688883117715, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
+      propertyPath: PickupObjectOffeset.x
+      value: 0.045
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078952688883117715, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
+      propertyPath: PickupObjectOffeset.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 7078952688883117715, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
+      propertyPath: PickupObjectOffeset.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7997289196215824577, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
       propertyPath: m_RootOrder
