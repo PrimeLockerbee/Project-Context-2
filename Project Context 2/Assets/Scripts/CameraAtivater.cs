@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class CameraAtivater : MonoBehaviour
 {
-    private Camera myCamera;
+    public Camera myCamera;
+    public Camera playerCamera;
+
     public float cameraDuration = 3.0f;
 
     private bool cameraActive = false;
 
     private void Start()
     {
-        myCamera = GameObject.Find("EndingCamera").GetComponent<Camera>();
+        ActivateCamera();
     }
 
     public void ActivateCamera()
@@ -26,8 +28,11 @@ public class CameraAtivater : MonoBehaviour
     private IEnumerator ActivateCameraCoroutine()
     {
         myCamera.enabled = true;
+        playerCamera.enabled = false;
         yield return new WaitForSeconds(cameraDuration);
         myCamera.enabled = false;
+        playerCamera.enabled = true;
         cameraActive = false;
+        this.gameObject.SetActive(false);
     }
 }
