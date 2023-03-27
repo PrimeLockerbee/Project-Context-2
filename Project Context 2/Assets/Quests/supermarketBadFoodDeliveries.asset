@@ -893,6 +893,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2807561954641718673, guid: 3a0c9b3751693374689d2b2668e8aa91, type: 3}
+        m_TargetAssemblyTypeName: AdderSubstracter, Assembly-CSharp
+        m_MethodName: AddToCompletedQuests
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2871527407220491167
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,4 +15,10 @@ public class AdderSubstracter : MonoBehaviour
         var add = GameObject.Find("GameManager").GetComponent<IslandStateKeeper>();
         add._islandState -= num;
     }
+
+    public void AddToCompletedQuests()
+    {
+        var add = GameObject.Find("GameManager").GetComponent<IslandStateKeeper>();
+        add._questsCompleted += 1;
+    }
 }

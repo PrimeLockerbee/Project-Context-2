@@ -105,24 +105,6 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
---- !u!114 &-7470305824223782123
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8dd425597ce38647ade6025cfd66c5e, type: 3}
-  m_Name: ActivateGameObjectQuestAction
-  m_EditorClassIdentifier: 
-  m_gameObjectName:
-    m_text: OverViewCameraActive
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_state: 1
 --- !u!114 &-7211456842444206208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -658,8 +640,7 @@ MonoBehaviour:
       - {fileID: -7211456842444206208}
     - m_contentList:
       - {fileID: 4460405940336778920}
-  - m_actionList:
-    - {fileID: -7470305824223782123}
+  - m_actionList: []
     m_categorizedContentList:
     - m_contentList: []
     - m_contentList:

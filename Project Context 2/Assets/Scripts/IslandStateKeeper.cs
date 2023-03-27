@@ -5,15 +5,16 @@ using UnityEngine;
 public class IslandStateKeeper : MonoBehaviour
 {
     [SerializeField] public int _islandState = 0;
+    [SerializeField] public int _questsCompleted = 0;
 
     [SerializeField] public GameObject endcam;
 
-    [SerializeField] public GameObject GoodEndCanvas;
-    [SerializeField] public GameObject BadEndCanvas;
+    [SerializeField] public GameObject EndCanvas;
 
     void Start()
     {
         _islandState = 0;
+
     }
 
     void Update()
@@ -25,19 +26,18 @@ public class IslandStateKeeper : MonoBehaviour
     {
         //endcam.depth = Camera.main.depth + 2;
         
-        if (_islandState == -2)
+        if (_islandState == -3)
         {
-            //endcam.depth = Camera.main.depth + 2;
-            //StartCoroutine(WaitSecondsBad());
-
         }
-        if (_islandState == 2)
+        if (_islandState == 3)
         {
-            //endcam.depth = Camera.main.depth + 2;
-            //StartCoroutine(WaitSecondsGood());
-
         }
-        
+
+
+        if (_questsCompleted == 2)
+        {
+            StartCoroutine(WaitSecondsGood());
+        }
     }
 
     IEnumerator WaitSecondsGood()
@@ -48,17 +48,6 @@ public class IslandStateKeeper : MonoBehaviour
 
         yield return new WaitForSeconds(6);
 
-        GoodEndCanvas.SetActive(true);
-    }
-
-    IEnumerator WaitSecondsBad()
-    {
-        yield return new WaitForSeconds(3);
-
-        endcam.SetActive(true);
-
-        yield return new WaitForSeconds(6);
-
-        BadEndCanvas.SetActive(true);
+        EndCanvas.SetActive(true);
     }
 }
