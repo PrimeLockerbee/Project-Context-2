@@ -11,6 +11,8 @@ public class IslandStateKeeper : MonoBehaviour
 
     [SerializeField] public GameObject EndCanvas;
 
+    [SerializeField] public GameObject Minimap;
+
     void Start()
     {
         _islandState = 0;
@@ -42,12 +44,13 @@ public class IslandStateKeeper : MonoBehaviour
 
     IEnumerator WaitSecondsGood()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         endcam.SetActive(true);
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(3);
 
         EndCanvas.SetActive(true);
+        Minimap.SetActive(false);
     }
 }
