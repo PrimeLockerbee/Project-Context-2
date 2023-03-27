@@ -10,9 +10,11 @@ public class FPSController : MonoBehaviour
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+    public float walkingspeedreturn;
+    public Vector3 PickupObjectOffeset;
 
     CharacterController characterController;
-    Vector3 moveDirection = Vector3.zero;
+    private Vector3 moveDirection;
 
     [HideInInspector]
     public bool canMove = true;
@@ -28,12 +30,15 @@ public class FPSController : MonoBehaviour
 
     private int smashDropHeight = 500;
 
+    
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        walkingspeedreturn = walkingSpeed;
     }
 
     void Update()
@@ -54,19 +59,21 @@ public class FPSController : MonoBehaviour
         // Move the character forward and backward using W and S keys
         Vector3 forward = transform.forward * v * walkingSpeed;
         Vector3 right = transform.right * h * walkingSpeed; // Add this line
-        characterController.SimpleMove(forward + right); // Add right vector
+        //characterController.SimpleMove(forward + right); // Add right vector
 
-        if (Input.GetKey(KeyCode.LeftShift))  // check if sprinting key is pressed
+         moveDirection = (forward + right);
+
+        if (Input.GetKey(KeyCode.LeftShift) && v != 0)  // check if sprinting key is pressed
         {
             walkingSpeed = runningSpeed;  // if so, set movement speed to sprinting speed
         }
         else
         {
-            walkingSpeed = 5.5f;
+            walkingSpeed = walkingspeedreturn;
         }
 
 
-
+        /*
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
@@ -76,8 +83,10 @@ public class FPSController : MonoBehaviour
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
+        */
+        moveDirection.y -= smashDropHeight;
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetButtonDown("Jump"))
         {
             _anim.SetTrigger("GroundPound");
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, /*smashRadius*/ 2);
@@ -93,7 +102,7 @@ public class FPSController : MonoBehaviour
 
 
         // Move the controller
-        characterController.Move(moveDirection * Time.deltaTime);
+        characterController.Move(moveDirection * walkingSpeed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -126,7 +135,7 @@ public class FPSController : MonoBehaviour
                 pickedUpObject.GetComponent<Rigidbody>().isKinematic = true;
                 pickedUpObject.GetComponent<Rigidbody>().useGravity = false;
                 pickedUpObject.GetComponent<BoxCollider>().enabled = false;
-                pickedUpObject.transform.position = transform.position + new Vector3(0, 2, 1.5f);
+                pickedUpObject.transform.position = transform.position + PickupObjectOffeset;
                 pickedUpObject.transform.parent = transform;
                 isHoldingObject = true;
 

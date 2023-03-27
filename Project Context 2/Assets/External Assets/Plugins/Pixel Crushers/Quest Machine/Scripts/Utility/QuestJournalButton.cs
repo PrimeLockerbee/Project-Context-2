@@ -12,6 +12,14 @@ namespace PixelCrushers.QuestMachine
     [AddComponentMenu("")] // Use wrapper.
     public class QuestJournalButton : MonoBehaviour
     {
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.J))
+            {
+                ToggleJournalUI();
+            }
+        }
+
         public void ToggleJournalUI()
         {
             var journal = QuestMachine.GetQuestJournal();
