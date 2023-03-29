@@ -89,14 +89,8 @@ public class FPSController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             _anim.SetTrigger("GroundPound");
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, /*smashRadius*/ 2);
-            foreach (Collider hitCollider in hitColliders)
-            {
-                if (hitCollider.CompareTag("Enemy"))
-                {
-                    Destroy(hitCollider.gameObject);     
-                }
-            }
+
+         
             moveDirection.y -= smashDropHeight;
         }
 
@@ -119,6 +113,17 @@ public class FPSController : MonoBehaviour
         }
 
         Move();
+    }
+    void onCollisionEnter(Collision hitCollider)
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+              if (hitCollider.gameObject.CompareTag("Enemy"))
+              {
+                    Destroy(hitCollider.gameObject);     
+           
+              }
+        }
     }
 
     private void PickUpObject()

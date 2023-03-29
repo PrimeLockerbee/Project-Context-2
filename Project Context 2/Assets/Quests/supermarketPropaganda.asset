@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: ActivateGameObjectQuestAction
   m_EditorClassIdentifier: 
   m_gameObjectName:
-    m_text: InterActible10
+    m_text: InterActible11
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: ActivateGameObjectQuestAction
   m_EditorClassIdentifier: 
   m_gameObjectName:
-    m_text: InterActible11
+    m_text: InterActible10
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Name: ActivateGameObjectQuestAction
   m_EditorClassIdentifier: 
   m_gameObjectName:
-    m_text: InterActible10
+    m_text: InterActible11
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_Name: ActivateGameObjectQuestAction
   m_EditorClassIdentifier: 
   m_gameObjectName:
-    m_text: InterActible11
+    m_text: InterActible10
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0

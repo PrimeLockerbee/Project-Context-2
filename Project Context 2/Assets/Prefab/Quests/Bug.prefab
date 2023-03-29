@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 197904442094954107}
   - component: {fileID: 3065633685825618822}
   - component: {fileID: 6892689324998696035}
-  - component: {fileID: 6582626135594209960}
   - component: {fileID: 4594817103116307827}
   - component: {fileID: 713490161505978023}
   - component: {fileID: 6480945458934901149}
   - component: {fileID: 492270273567583146}
   - component: {fileID: 6774884175197254513}
+  - component: {fileID: 344839902631405984}
   m_Layer: 0
   m_Name: Bug
   m_TagString: Enemy
@@ -106,19 +106,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6582626135594209960
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5546876202696133132}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.73101425, y: 0.5001569, z: 1.1592941}
-  m_Center: {x: -0.002336502, y: 0.24992156, z: 0.016788483}
 --- !u!195 &4594817103116307827
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -256,3 +243,16 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: 350669b6f2cc8e14297d116d231c55be, type: 2}
+--- !u!135 &344839902631405984
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546876202696133132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6934923
+  m_Center: {x: 0, y: 0.02809751, z: 0.041062593}
