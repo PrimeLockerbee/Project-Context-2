@@ -179,21 +179,18 @@ LODGroup:
   serializedVersion: 2
   m_LocalReferencePoint: {x: 0, y: 0, z: 0}
   m_Size: 1
-  m_FadeMode: 0
+  m_FadeMode: 1
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.055999998
-    fadeTransitionWidth: 0
+  - screenRelativeHeight: 0.10435079
+    fadeTransitionWidth: 0.118
     renderers:
     - renderer: {fileID: 3178858665292916120}
-  - screenRelativeHeight: 0.0002
-    fadeTransitionWidth: 0
+  - screenRelativeHeight: 0.0061280476
+    fadeTransitionWidth: 0.158
     renderers:
     - renderer: {fileID: 3547125318814357412}
-  - screenRelativeHeight: 0.0001
-    fadeTransitionWidth: 0
-    renderers: []
   m_Enabled: 1
 --- !u!208 &6222885826662058183
 NavMeshObstacle:

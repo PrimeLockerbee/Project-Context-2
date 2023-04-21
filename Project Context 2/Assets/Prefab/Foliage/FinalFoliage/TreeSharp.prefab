@@ -180,21 +180,18 @@ LODGroup:
   serializedVersion: 2
   m_LocalReferencePoint: {x: 0, y: 0, z: 0}
   m_Size: 1
-  m_FadeMode: 0
+  m_FadeMode: 1
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.055999998
-    fadeTransitionWidth: 0
+  - screenRelativeHeight: 0.114861675
+    fadeTransitionWidth: 0.119
     renderers:
     - renderer: {fileID: 1455910988988915704}
-  - screenRelativeHeight: 0.009884897
-    fadeTransitionWidth: 0
+  - screenRelativeHeight: 0.009388314
+    fadeTransitionWidth: 0.161
     renderers:
     - renderer: {fileID: 808674506726031905}
-  - screenRelativeHeight: 0.0001
-    fadeTransitionWidth: 0
-    renderers: []
   m_Enabled: 1
 --- !u!136 &4108865657281213599
 CapsuleCollider:
