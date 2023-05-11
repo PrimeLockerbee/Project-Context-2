@@ -53177,7 +53177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
       propertyPath: m_SplatMapDistance
-      value: 259
+      value: 355
       objectReference: {fileID: 0}
     - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
       propertyPath: m_ShadowCastingMode
@@ -53189,7 +53189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
       propertyPath: m_HeightmapPixelError
-      value: 51
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
       propertyPath: m_TreeCrossFadeLength
