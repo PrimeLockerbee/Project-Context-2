@@ -5,11 +5,11 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 1
-    smallestHole: 0.01
-    backfaceThreshold: 5.9
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
   m_SceneGUID: 69dd2383b13dda74d8a8347674a9d3d3
-  m_OcclusionCullingData: {fileID: 36300000, guid: ea797eafe64931847a280424dfb3cf4b, type: 2}
+  m_OcclusionCullingData: {fileID: 36300000, guid: 98716d49ddc7033488c3d309cf04b291, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -11800,7 +11800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &566285163
 Transform:
   m_ObjectHideFlags: 0
@@ -53164,12 +53164,32 @@ PrefabInstance:
       value: 3495
       objectReference: {fileID: 0}
     - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
+      propertyPath: m_DrawHeightmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
+      propertyPath: m_DrawInstanced
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
+      propertyPath: m_AllowAutoConnect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
+      propertyPath: m_SplatMapDistance
+      value: 259
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
       propertyPath: m_ShadowCastingMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
       propertyPath: m_DetailObjectDensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
+      propertyPath: m_HeightmapPixelError
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 1226416839735114372, guid: 1afc271ce4f46fb48a4fdecf0552f1d8, type: 3}
       propertyPath: m_TreeCrossFadeLength
@@ -80599,6 +80619,10 @@ PrefabInstance:
     - target: {fileID: 7997289196301419147, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997289196301419148, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7997289196512676137, guid: bb38a4ad5905b8340a836b0a7040d5b6, type: 3}
       propertyPath: m_LocalPosition.y
